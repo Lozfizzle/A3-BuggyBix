@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    color: #302718;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    font-weight: 600;
+    color: #111;
+}
+
+
+
+
+
+/* ============ section 1: landing ============ */ 
+
+.section.section-landing {
+    height: 100vh;
+    position: relative;
+    
+}
+
+/*hero image */
+.hero-bg {
+    background: url("images/puppy-hero.png") center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    /* z-index: -1; */
+}
+
+/*hero content */
+.section-landing .content{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+
+.banner {
+    height: 40px;
+    background-color: #EB8B31;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    text-align: center;
+}
