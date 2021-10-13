@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*hero image */
 .hero-bg {
-    background: url("images/puppy-hero.png") center center no-repeat;
+    background: url("images/puppy-hero.png") center center no-repeat; /*TODO: safe for web image size */
     background-size: cover;
     height: 100%;
     /* z-index: -1; */
