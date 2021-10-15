@@ -26,15 +26,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #302718;
 }
 
-/* ======================== menu ======================== */
+/* ======================== menu & banner ======================== */
+.banner {
+    height: 35px;
+    line-height: 35px;
+    background-color: #EB8B31;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    z-index: 99;
+}
+
+.banner p {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    font-weight: 500;
+}
 
 .topbar {
     position: fixed;
-    top: 35px;
+    top: 50px;
     left: 0;
     right: 0;
     height: 70px;
-    background: rgba(0, 0, 0, 0.2);
     display: flex;
     /* justify-content: flex-end;*/
     z-index: 100;
@@ -44,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     transition: all 0.6s cubic-bezier(.4, .08, 0, 1.02);
     padding-left: 3%;
+    width: 100%;
 }
 
 .topbar a {
@@ -55,11 +72,35 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.85em;
     letter-spacing: 0.05em;
     transition: all 0.2s;
+    vertical-align: middle;
+    
 }
 
 .topbar a:hover {
-    color: #fff;
+    color: #EB8B31;
 }
+
+.topbar .logo {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+}
+
+.topbar .icons-right {
+    font-size: 1.5em;
+    position: absolute;  
+    top: 50%;
+    right: 3%;
+    transform: translate(-50%, -50%);
+}
+
+.topbar .icon {
+    padding: 0.5em;
+}
+
+
 
 .hamburger-btn {
     position: absolute;
@@ -88,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     /*TODO: safe for web image size */
     background-size: cover;
     height: 100%;
-    /*z-index: -1;*/
+    z-index: -1;
 }
 
 /*hero content */
@@ -99,19 +140,3 @@ h1, h2, h3, h4, h5, h6 {
     right: 10%;
 }
 
-.banner {
-    height: 35px;
-    line-height: 35px;
-    background-color: #EB8B31;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    text-align: center;
-}
-
-.banner p {
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
-    font-weight: 500;
-}
