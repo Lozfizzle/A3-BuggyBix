@@ -58,9 +58,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .primary-menu {
     display: flex;
-    transition: all 0.6s cubic-bezier(.4, .08, 0, 1.02);
+    /* transition: all 0.5s cubic-bezier(.56,.14,.64,.96);  */
     padding-left: 3%;
     width: 100%;
+    vertical-align: middle;
 }
 
 .topbar a {
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 15%;
+  width: 300px;
 }
 
 .topbar .icons-right {
@@ -100,8 +101,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5em;
 }
 
-
-
 .hamburger-btn {
     position: absolute;
     left: 0;
@@ -111,8 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hamburger-btn::part(base) {
-    color: #999;
-    font-size: 1.6em;
+    color: #EB8B31;
+    font-size: 1.8em;
 }
 
 /* ======================== section 1: landing ======================== */
@@ -140,3 +139,40 @@ h1, h2, h3, h4, h5, h6 {
     right: 10%;
 }
 
+
+
+
+
+/* MOBILE --------------------------------*/
+@media only screen and (max-width: 768px) {
+
+    .hamburger-btn {
+      display: block;
+    }
+  
+    .primary-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: #EB8B31;
+      flex-direction: column;
+      /* align-items: center;*/
+      /* justify-content: center;*/
+      transform: translateX(-100%);
+      opacity: 0.5;
+      transition: all 0.5s cubic-bezier(.56,.14,.64,.96); 
+      /* TODO: any way to get this not to do the transition when resizing from desktop to mobile?? */
+    }
+  
+    .primary-menu a {
+      font-size: 1.5em;
+
+    }
+  
+    .primary-menu.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
