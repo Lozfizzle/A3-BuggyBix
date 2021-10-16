@@ -143,43 +143,57 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 50px;
 }
 
-/* ======================== section 1: socialproof ======================== */
+.side-text {
+    position: absolute;
+    z-index: 102;
+}
 
-.section.section-socialproof {
+.side-text.left {
+    transform: rotate(-90deg);
+    left: 10px;
+    top:50%;
+}
+
+.side-text.right {
+    transform: rotate(90deg);
+    right: 10px;
+    top:50%;
+}
+
+
+
+/* ======================== section 2: socialproof ======================== */
+
+.section.section-marquee {
     height: 100vh;
     background-color: #EBEBEB;
 }
 
 .logo-marquee-container {
-    padding-top: 14em;
-    position: relative;
-    width: 100vw;
-    /* max-width: 100%; */
+    padding-top: 200px;
+    /* position: relative; */
     overflow: hidden;
+    width: 150%;
+    max-width: 100%;
     display: flex;
+    white-space: nowrap;
+    
 }
 
 .logo-marquee {
     height: 50px;
-    background-color: red;
+    background-color: brown;
     display: flex;
+    border:2px solid aqua;
     /*TODO: why now gap on the side here */
     /* animation: marquee 10s linear infinite */
     /*TODO: fix this timing later */
+    /* animation: marquee 25s linear infinite; */
     
 }
 
-.logo-marquee.first {
-    animation: marquee 25s linear infinite;
-}
-
-.logo-marquee.second {
-    animation: marquee 25s linear infinite 1s;
-    background-color: #EB8B31;
-}
-
 .logo-marquee-item {
-    height: 30px;
+    height: 50px;
     /* display: flex; */
     padding: 0 80px;
 }
@@ -195,6 +209,43 @@ h1, h2, h3, h4, h5, h6 {
     100% {
         transform: translateX(-100%);
     }
+}
+
+.ingredients {
+    text-align: center;
+}
+
+.ingredients.content h1 {
+    padding-top: px;
+}
+
+.ingredients.content p {
+    padding: 0 30% ;
+}
+
+.ingredients.images {
+    position: relative;
+}
+
+/* TODO: why wont this respond to more spscific tags?? .ingredients .images .packet {} */
+.packet {
+    width: 25%;
+    display: inline-block;
+    padding-top: 25%;
+}
+
+/* TODO: why wont this respond to more spscific tags?? .ingredients .images .packet img {} */
+.packet img {
+    width: 100%;
+}
+
+.ingredient {
+    height: 200px;
+    position: absolute;
+}
+
+.ingredient img {
+    height: 100%;
 }
 
 /* ======================== MOBILE ======================== */
