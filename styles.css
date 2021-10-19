@@ -33,7 +33,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 35px;
     background-color: #EB8B31;
     position: absolute;
-    top: 0;
     width: 100vw;
     text-align: center;
     z-index: 99;
@@ -48,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .topbar {
     position: fixed;
-    top: 50px;
+    top: 35px;
     left: 0;
     right: 0;
     height: 70px;
@@ -117,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 .section.section-landing {
     height: 100vh;
     position: relative;
+    z-index: 2;
 }
 
 /*hero image */
@@ -125,8 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url("images/puppy-hero.png") center center no-repeat;
     /*TODO: safe for web image size. also gradient fade out at bottom */
     background-size: cover;
-    height: 100%;
-    z-index: -1;
+    height: 100vh;
 }
 
 /*hero content */
@@ -145,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .side-text {
     position: absolute;
-    z-index: 102;
+    z-index: 1;
 }
 
 .side-text.left {
@@ -165,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ======================== section 2: socialproof ======================== */
 
 .section.section-marquee {
-    height: 100vh;
+    height: 50vh;
     background-color: #EBEBEB;
 }
 
@@ -177,7 +176,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     display: flex;
     white-space: nowrap;
-    
 }
 
 .logo-marquee {
@@ -211,41 +209,92 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
 .ingredients {
     text-align: center;
 }
 
 .ingredients.content h1 {
-    padding-top: px;
+    padding-top: 5%;
 }
 
 .ingredients.content p {
-    padding: 0 30% ;
+    padding: 0 30% 10%;
 }
 
-.ingredients.images {
-    position: relative;
+.ingredients-images {
+    height: 100vh;
+    background-color: beige;
+    /* text-align: center; */
 }
 
-/* TODO: why wont this respond to more spscific tags?? .ingredients .images .packet {} */
-.packet {
-    width: 25%;
-    display: inline-block;
-    padding-top: 25%;
-}
+.ingredient-packet {
+    width: 700px;
+    margin: auto; 
+}    
 
-/* TODO: why wont this respond to more spscific tags?? .ingredients .images .packet img {} */
-.packet img {
+.ingredients-all {
     width: 100%;
 }
 
-.ingredient {
-    height: 200px;
-    position: absolute;
+
+/* ======================== signup ======================== */
+.section.sign-up {
+    text-align: center;
 }
 
-.ingredient img {
-    height: 100%;
+.sign-up h1 {
+    padding-top: 5%;    
+}
+
+.sign-up p {
+    padding: 0 30%;
+}
+
+
+
+/* ======================== footer ======================== */
+
+footer {
+    height: 300px;
+    background-color: #73A641;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.col1, 
+.col2 {
+    width: 30%;
+    padding: 2% 5%;
+} 
+
+.col3 {
+    width: 40%;
+    padding: 2% 0 0 5%;
+}
+
+footer p {
+    margin-top: 5px
+}
+
+footer h3 {
+    margin: 0;
+}
+
+footer .logo {
+    height: 19px;
+}
+
+footer .logo .cls-1 {
+    fill: #fff;
+}
+
+footer .dog-animation {
+    height: 170px;
+    width: 170px;
+    background-color: #302718;
 }
 
 /* ======================== MOBILE ======================== */
