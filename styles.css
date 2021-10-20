@@ -237,6 +237,40 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+/* ======================== benefits ======================== */
+
+.section-benefits {
+    text-align: center;
+}
+
+/* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
+mobile - only show h2?? */
+
+.benefit-columns {
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    padding: 0 8%;
+}
+
+.benefit-column {
+    text-align: center;
+    flex-grow: 1;
+    width: 15%;
+
+}
+
+.benefit-column .benefit-col-img {
+    width: 65%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 1.8em;
+}
+
+.benefit-column p {
+    padding: 0 7%;
+}
+
 
 /* ======================== signup ======================== */
 .section.sign-up {
