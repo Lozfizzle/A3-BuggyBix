@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    color: #302718;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    color: #302718;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    font-weight: 600;
+    color: #302718;
+}
+
+/* swiper */ 
+
+.section.section-reviews {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.section.section-reviews h1 {
+    position: absolute;
+    right: 150px;
+    padding-top: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
