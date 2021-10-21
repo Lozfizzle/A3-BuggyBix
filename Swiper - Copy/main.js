@@ -1,7 +1,7 @@
 console.log("JavaScript is working!")
 
 let swiperTestimonialImage = new Swiper(".swiper.mySwiper1", {
-    slidesPerView: "1",
+    slidesPerView: "auto",
     spaceBetween: 30,
     loop: true,
     navigation: {
@@ -27,6 +27,7 @@ let swiperTestimonialText = new Swiper(".swiper.mySwiper2", {
         enabled: true,
         onlyInViewport: false,
     },
+    // effect: 'fade',
     
 });
 

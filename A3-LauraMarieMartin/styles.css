@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     height: 70px;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     z-index: 100;
 }
@@ -161,53 +162,38 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* ======================== section 2: socialproof ======================== */
+/* ======================== section 2: logo marquee ======================== */
 
 .section.section-marquee {
-    height: 50vh;
     background-color: #EBEBEB;
+    padding: 3em 0;
 }
 
-.logo-marquee-container {
-    padding-top: 200px;
-    /* position: relative; */
-    overflow: hidden;
-    width: 150%;
-    max-width: 100%;
-    display: flex;
-    white-space: nowrap;
-}
-
-.logo-marquee {
-    height: 50px;
-    background-color: brown;
-    display: flex;
-    border:2px solid aqua;
-    /*TODO: why now gap on the side here */
-    /* animation: marquee 10s linear infinite */
-    /*TODO: fix this timing later */
-    /* animation: marquee 25s linear infinite; */
-    
-}
-
-.logo-marquee-item {
-    height: 50px;
-    /* display: flex; */
-    padding: 0 80px;
-}
-
-.logo-item {
+.logo-swiper {
+    width: 100%;
     height: 100%;
+    position: relative;
 }
 
-@keyframes marquee {
+.logo-swiper .swiper-wrapper {
+    -webkit-transition-timing-function:linear!important;
+    transition-timing-function:linear!important; 
+    position: relative;
+}
+
+.logo-swiper .swiper-slide img {
+    width: 80%;
+    height: 100px;
+}
+
+@keyframes line-slide {
     0% {
-        transform: translateX(0);
+      background-position: -5% 0;
     }
     100% {
-        transform: translateX(-100%);
+      background-position: 100% 0;
     }
-}
+  }
 
 
 .ingredients {
