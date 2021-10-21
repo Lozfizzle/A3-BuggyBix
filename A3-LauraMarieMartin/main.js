@@ -22,22 +22,13 @@ hamburgerBtn.addEventListener('click', () => {
 
 
 
-gsap.to(".topbar", {
-  scrollTrigger: {
-    trigger: ".topbar",
-    start: "500",
-  },
-  y: '-35',
-  backgroundColor: '#FFF',
-  duration: '1',
-});
 
 
 // logo marquee
 const logoSwiper = new Swiper('.logo-swiper', {
-  spaceBetween: 0,
+  spaceBetween: 60,
   centeredSlides: true,
-  speed: 6000,
+  speed: 7500,
   autoplay: {
     delay: 1,
   },

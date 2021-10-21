@@ -182,8 +182,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-swiper .swiper-slide img {
-    width: 80%;
-    height: 100px;
+    height: 30px;
+    width: 100%;
 }
 
 @keyframes line-slide {
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
-
+/* ======================== section 3: ingredients ======================== */
 .ingredients {
     text-align: center;
 }
