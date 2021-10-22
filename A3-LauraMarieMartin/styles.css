@@ -159,6 +159,31 @@ h1, h2, h3, h4, h5, h6 {
     top:50%;
 }
 
+/* shop sustainable button */ 
+.shop-sustainable #button-shop {
+    height: 40px;
+    margin-top: 2em;
+    transition: all 0.3s ease-in;
+    cursor: pointer; 
+}
+
+/* text inside the svg */
+.shop-text {
+    font-size: 10em;
+    font-weight: 500;
+}
+
+.shop-sustainable #button-shop:hover {
+    transform: translate(10px, -10px);
+    /* transform: scale(1.05); */
+}
+
+#button-shop:hover > .button-wide {
+    fill: #FFAC5E;
+    transition: all 0.3s ease-in;
+}
+
+
 /* scroll down arrow in circle */
 .button-down {
     position: absolute; 
@@ -171,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 50px;
 }
 
-/* hover animation: become larger, decrease opacity */
+/* hover animation: become larger, and change colour */
 #circle-with-button {
     transition: all 0.3s ease-in-out;
     /* height: 100%; */
@@ -179,7 +204,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #circle-with-button:hover {
     transform: scale(1.2);
-    opacity: 0.8;
+}
+
+/* change the colour of the path. */ 
+#circle-with-button:hover > .circle-button {
+    fill: #FFAC5E;
 }
 
 /* pause bounce animation on arrow when hovering anywhere on the circle */
