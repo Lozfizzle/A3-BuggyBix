@@ -1,9 +1,27 @@
 console.log("JavaScript is working!")
 
-let swiperTestimonialImage = new Swiper(".swiper.mySwiper1", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    loop: true,
+// let swiperTestimonialImage = new Swiper(".swiper.mySwiper1", {
+//     slidesPerView: "auto",
+//     spaceBetween: 30,
+//     loop: true,
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     keyboard: {
+//         enabled: true,
+//         onlyInViewport: false,
+//     },
+    
+// });
+
+
+
+var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
+    spaceBetween: 0,
+    slidesPerView: "1.5",
+    loop: true, 
+    centeredSlides: true, 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -12,25 +30,31 @@ let swiperTestimonialImage = new Swiper(".swiper.mySwiper1", {
         enabled: true,
         onlyInViewport: false,
     },
+    speed: 1000,   
     
-});
+})
 
-let swiperTestimonialText = new Swiper(".swiper.mySwiper2", {
+var swiperTestimonialText = new Swiper(".testimonial-text-swiper", {
     slidesPerView: "1",
     spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    effect: "fade",
+    fadeEffect: { 
+        crossFade: true 
     },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-    },
-    // effect: 'fade',
+    loop: false,
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+    allowTouchMove: false,
+    // keyboard: {
+    //     enabled: true,
+    //     onlyInViewport: false,
+    // },
+
+    
     
 });
 
-swiperTestimonialImage.controller.control = swiperTestimonialText;
-swiperTestimonialText.controller.control = swiperTestimonialImage;
-
+// testimonialImageSwiper.controller.control = swiperTestimonialText;
+// swiperTestimonialText.controller.control = testimonialImageSwiper;

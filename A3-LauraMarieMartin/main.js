@@ -1,6 +1,11 @@
 console.log("A3 is working!")
 gsap.registerPlugin(ScrollTrigger);
 
+// clicking the down arrow button takes the user to the next section
+const downArrowBtn = document.querySelector('#circle-with-button')
+downArrowBtn.addEventListener('click', () => {
+  document.querySelector('.section-marquee').scrollIntoView()
+})
 
 // responsive menu
 // get the hamburger icon, and the menu-div
@@ -12,6 +17,10 @@ hamburgerBtn.addEventListener('click', () => {
   primaryMenu.classList.toggle('show')
   hamburgerBtn.classList.toggle('is-active')
 })
+
+
+
+
 
 
 // menu animation on scroll
