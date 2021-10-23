@@ -29,6 +29,25 @@ hamburgerBtn.addEventListener('click', () => {
 // 2. when scroll bar hits bottom of the landing div, changes to solid background colour
 // 3. 
 
+gsap.from(".section-landing .content", {
+  x: 250,
+  duration: 1,
+  opacity: 0
+})
+
+gsap.to(".topbar", {
+  duration: 5, 
+  scrollTrigger: {
+    trigger: ".topbar",
+    start: "bottom 90",
+    end: 9999,
+    markers: true,
+    toggleClass: "scrolled"
+  }
+})
+
+
+
 
 
 

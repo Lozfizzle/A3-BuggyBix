@@ -4,6 +4,7 @@ html {
 
 * {
     box-sizing: border-box;
+    
 }
 
 body {
@@ -12,7 +13,10 @@ body {
     color: #302718;
     margin: 0;
     padding: 0;
+   
 }
+
+
 
 p {
     font-family: 'DM Sans', sans-serif;
@@ -58,6 +62,17 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(255, 255, 255, 0);
     display: flex;
     z-index: 100;
+}
+
+.scrolled {
+    top: 0;
+    /* background-color: #EBEBEB; */
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    transition: all 0.2s ease-in;
 }
 
 .primary-menu {
