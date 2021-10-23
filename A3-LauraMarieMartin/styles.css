@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100;
 }
 
-.scrolled {
+.topbar-scrolled {
     top: 0;
     /* background-color: #EBEBEB; */
     position: fixed;
@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     display: flex;
     z-index: 100;
+    height: 40px;
     transition: all 0.2s ease-in;
 }
 
