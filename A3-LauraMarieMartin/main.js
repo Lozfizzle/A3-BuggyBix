@@ -1,12 +1,14 @@
 console.log("A3 is working!")
 gsap.registerPlugin(ScrollTrigger);
 
+
+// home section
+
+// function to begin the gsap timeline animation for the elements in the home section
 homeSection()
 
 
-
-
-// clicking the down arrow button takes the user to the next section
+// click on arrow down button takes user to the next section (the logo marquee section)
 const downArrowBtn = document.querySelector('#circle-with-button')
 downArrowBtn.addEventListener('click', () => {
   document.querySelector('.section-marquee').scrollIntoView()
@@ -23,6 +25,20 @@ hamburgerBtn.addEventListener('click', () => {
   hamburgerBtn.classList.toggle('is-active')
 })
 
+// banner using swiper JS
+// banner uses infinite looping, text swaps out vertically, and changes every 4 seconds. 
+const bannerSwiper = new Swiper('.banner-swiper', {
+  spaceBetween: 0,
+  centeredSlides: true,
+  direction: "vertical",
+  loop: true,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  }
+});
+
 
 
 
@@ -30,62 +46,53 @@ hamburgerBtn.addEventListener('click', () => {
 // 1. scroll down and .banner no longer in view, the navigation bar moves up to fill that space. 
 //    at this time the logo gets smaller 
 // 2. when scroll bar hits bottom of the landing div, changes to solid background colour for the rest of the website
-// 3. 
+// 
 // toggle the class with these properties in css. 
-// ScrollTrigger.create({
-//   trigger: ".topbar",
-//     start: "bottom 90",
-//     endTrigger: "footer",
-//     end: "bottom 400", //TODO: not sure how else to just get it to not end??? 9999 added padding to the bottom?
-//     markers: {
-//       startColor: "purple",
-//       endColor: "fuscia",
-//       fontSize: "1.5em"
-//     },
-//     toggleClass: {classname: "-scrolled", targets: ".topbar", classname: "-scrolled", targets: ".logo"} 
-//     // toggleClass: "topbar .logo-scrolled", target: ".topbar .logo"
-// })
-
-
-
-
 
 var tl = gsap.timeline()
 tl.to(".topbar", {
-    // top: 0, duration: 0.2, ease: "ease-in", 
     scrollTrigger: {
       trigger: ".topbar",
       start: "bottom 90",
-      endTrigger: "footer",
+      endTrigger: ".topbar",
       end: "bottom 400", //TODO: not sure how else to just get it to not end??? 9999 added padding to the bottom?
-      toggleClass: "topbar-scrolled",
-      // scrub: true,
+      // toggleClass: "topbar-scrolled",
+      toggleActions: "play none none reverse",
+      
+      scrub: 0.3,
       markers: {
         startColor: "purple",
         endColor: "fuscia",
         fontSize: "1.5em"
         },
-    }
+    },
+    // duration: 1, //TODO: not sure how to get this smooth???. IT doesnt seeem to listen to duration?? 
+    height: "40px", 
+    y: "-30",
+    ease: Power4.easeIn,
   });
 tl.to(".topbar .logo", {
   width: "150px",
-  duration: 0.3,
-  ease: "ease-in",
+  duration: 1, // duration doesnt seem to make a difference?? or ease. 
+  ease: Power4.easeIn,
   scrollTrigger: {
     trigger: ".topbar",
     start: "bottom 90",
-    endTrigger: "footer",
+    endTrigger: ".topbar",
     end: "bottom 400",
+    toggleActions: "play none none reverse",
+    // scrub: 0.1,
   }
 })
-  
+
+// function. animate home section elements. 
 function homeSection(){
   console.log("homesection")
 
   const tl = new TimelineMax({delay: 0.5})
   tl.from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
     .from(".button-down", {y: -30, duration: 1.5, opacity: 0}, "-=0.5" )
-    .from(".shop-sustainable", {y:30, duration: 1, opacity: 0}, "-=0.5")
+    .from(".shop-sustainable", {y:30, duration: 1, opacity: 0}, "-=1")
 }
 
 
@@ -99,7 +106,6 @@ function homeSection(){
 //scrub: true
 // or give it a number to smooth
 //scrub: 4 
-
 
 // can pin element in place 
 // pin: ".topbar"
