@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+    <!-- shoelace componenets https://shoelace.style/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.55/dist/themes/light.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.55/dist/shoelace.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/spc3jis.css">
+    <!-- Swiper JS https://swiperjs.com/-->
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <title>Project Name</title>
 </head>
@@ -31,8 +38,67 @@
       
         
     </div>
+
+
+    <div class="section section-ingredients">
+        <div class="ingredients content">
+            <h1>Pet food <span class="orange-text">with a difference</span></h1>
+            <p>A healthy, natural, 100% Australian product incorporating all of the goodness of insects and real food into delicious and sustainable food and treats. Trust us, your pet and the planet will thank you!</p>
+        </div>
+        <div class="ingredients-images">
+            <div class="ingredient-packet">
+                <img src="images/all-ingredients.png" alt="packet of buggy bix surrounded by ingredients" class="ingredients-all">
+            </div>
+        <div class="why-insects">
+            <div class="why-content">
+                <h1><span class=white-text>Why</span> insect protein?</h1>
+            </div>
+            <div class="why-content-left">
+                <h1><span class=white-text>Our vision</span>is no mean feat</h1>
+                <p>We want to reimagine how we nourish our pets.</p>
+            </div>
+
+        </div>    
+        </div>
+    </div>
+
+    <!--============ section x : benefits ============-->
+    <div class="section section-benefits">
+        <div class="benefit-columns">
+            <div class="benefit-column">
+                <img src="images/benefit-1.svg" alt="benefit 1: Nutricious icon" class="benefit-col-img">
+                <h2>Nutritious</h2>
+                <p>Complete nutritional profile, loaded with protein and essential vitamins and minerals.</p>
+            </div>
+            <div class="benefit-column">
+                <img src="images/benefit-2.svg" alt="benefit 2: Hypoallergenic icon" class="benefit-col-img">
+                <h2>Hypoallergenic</h2>
+                <p>Easy for pets to digest. Perfect for pets with sensitive stomaches.</p>
+            </div>
+            <div class="benefit-column">
+                <img src="images/benefit-3.svg" alt="benefit 3: Planet-friendly icon" class="benefit-col-img">
+                <h2>Planet-friendly</h2>
+                <p>Minimal environmental impact of insects means better for the planet.</p>
+            </div>
+            <div class="benefit-column">
+                <img src="images/benefit-4.svg" alt="benefit 4: Vet approved icon" class="benefit-col-img">
+                <h2>Vet approved</h2>
+                <p>Developed and tested using university research. Recommended by vetrenarians.</p>
+            </div>
+            <div class="benefit-column">
+                <img src="images/benefit-5.svg" alt="benefit 5: Pets love it! icon" class="benefit-col-img">
+                <h2>Pets love it!</h2>
+                <p>Delicious food and treats for cats and dogs. Guarenteed to keep them coming back for more.</p>
+            </div>
+        </div>
+    </div>
+
         
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+    <!-- GSAP animation and scroll trigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <!-- swiper JS-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -2,14 +2,38 @@
 	box-sizing: border-box;
 }
 
+
+
 body {
-	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    color: #302718;
+    margin: 0;
+    padding: 0;
 }
 
-.section {
-	height: 100vh;
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    color: #302718;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    font-weight: 600;
+    color: #302718;
+}
+
+.orange-text {
+	color: #EB8B31;
+}
+
+.white-text {
+    color: #ffffff;
 }
 
 /* .link {
@@ -38,3 +62,64 @@ body {
 	right: auto;
 	width: 100%;
 } */
+
+/* ======================== section 3: ingredients ======================== */
+.ingredients {
+    text-align: center;
+}
+
+.ingredients.content h1 {
+    padding-top: 5%;
+}
+
+.ingredients.content p {
+    padding: 1% 30% 5%;
+}
+
+.ingredients-images {
+    height: 400vh;
+    /* background-color: beige; */
+}
+
+.ingredient-packet {
+    width: 700px;
+    margin: auto; 
+}    
+
+.ingredients-all {
+    width: 100%;
+}
+
+/* ======================== benefits ======================== */
+.section-benefits {
+    text-align: center;
+}
+
+/* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
+mobile - only show h2?? */
+
+.benefit-columns {
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    padding: 0 8%;
+}
+
+.benefit-column {
+    text-align: center;
+    flex-grow: 1;
+    width: 15%;
+
+}
+
+.benefit-column .benefit-col-img {
+    width: 65%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 1.8em;
+}
+
+
+.benefit-column p {
+    padding: 0 7%;
+}
