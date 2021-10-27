@@ -94,11 +94,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #EB8B31;
 }
 
+/* I modified this for the underline on the navigation bar links
+from a combination of these
+https://tympanus.net/Development/LineHoverStyles/ 
+https://codepen.io/gabrielcojea/pen/ExPaBzQ */
+
 .link {
     position: relative;
     height: 40px;
 }
 
+/*the line itself */ 
 .link::before {
 	content: '';
 	position: absolute;
@@ -110,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 	transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* on hover, the line underneath changes from from 0 to 100% width */
 .link:hover::before {
 	left: 0;
 	right: auto;

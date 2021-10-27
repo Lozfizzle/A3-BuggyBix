@@ -12,11 +12,11 @@ body {
 	height: 100vh;
 }
 
-.link {
+/* .link {
 	cursor: pointer;
 	font-size: 18px;
 	position: relative;
-	/* white-space: nowrap; */
+	/* white-space: nowrap; 
 	color: #EB8B31;
 	text-decoration: none;
 	font-family: sans-serif;
@@ -37,4 +37,4 @@ body {
 	left: 0;
 	right: auto;
 	width: 100%;
-}
+} */
