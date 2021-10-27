@@ -53,7 +53,7 @@ var tl = gsap.timeline()
 tl.to(".topbar", {
     scrollTrigger: {
       trigger: ".topbar",
-      start: "bottom 90",
+      start: "bottom 35",
       endTrigger: ".topbar",
       end: "bottom 400", //TODO: not sure how else to just get it to not end??? 9999 added padding to the bottom?
       // toggleClass: "topbar-scrolled",
@@ -77,7 +77,7 @@ tl.to(".topbar .logo", {
   ease: Power4.easeIn,
   scrollTrigger: {
     trigger: ".topbar",
-    start: "bottom 90",
+    start: "bottom 35",
     endTrigger: ".topbar",
     end: "bottom 400",
     toggleActions: "play none none reverse",

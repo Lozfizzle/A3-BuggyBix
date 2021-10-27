@@ -4,7 +4,6 @@ html {
 
 * {
     box-sizing: border-box;
-    
 }
 
 body {
@@ -13,10 +12,7 @@ body {
     color: #302718;
     margin: 0;
     padding: 0;
-   
 }
-
-
 
 p {
     font-family: 'DM Sans', sans-serif;
@@ -57,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	align-items: center;
-
     /*text */
     font-weight: 500;
 }
@@ -82,20 +77,43 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
-.topbar a {
+.primary-menu a {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 1.1em;
     color: #302718;
     text-decoration: none;
-    padding: 0.85em;
+    padding: 0.85em 0.25em;
+    margin: 0 0.85em;
     letter-spacing: 0.05em;
     transition: all 0.2s;
     vertical-align: middle;
 }
 
-.topbar a:hover {
+.primary-menu a:hover {
     color: #EB8B31;
+}
+
+.link {
+    position: relative;
+    height: 40px;
+}
+
+.link::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color:  #EB8B31;
+	transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link:hover::before {
+	left: 0;
+	right: auto;
+	width: 100%;
 }
 
 .topbar .logo {
@@ -409,7 +427,7 @@ footer .dog-animation {
         top: 0;
         left: 0;
         right: 0;
-        height: 100%;
+        height: 100vh;
         background: #EB8B31;
         flex-direction: column;
         /* align-items: center;*/
@@ -419,18 +437,31 @@ footer .dog-animation {
         /* TODO: any way to get this not to do the transition when resizing from desktop to mobile?? */
         padding-top: 100px
     }
-    .primary-menu a {
+
+    .primary-menu .link a {
         font-size: 1.8em;
-        padding: 0.75em 0.5em;
+        padding: 1em 0.5em;
+        margin-bottom: 1em;
         transition: all 0.2s;
         margin-left: 60px;
     }
+    .primary-menu .link {
+        height: auto;
+        width: 100%;
+    }
+    /* TODO: link underline goes the full way across in mobile view */
+    .primary-menu .link::before {
+        background-color: #fff;
+    }
+
     .primary-menu a:first-of-type {
         margin-top: 40px;
     }
+
     .icons-right {
         display: none;
     }
+
     .icons-mobile {
         display: block;
     }
@@ -446,8 +477,8 @@ footer .dog-animation {
         top: 75px;
         width: 200px;
     }
-    .topbar a:hover {
-        color: #EB8B31;
+    .primary-menu a:hover {
+        color: #fff;
     }
     /* hamburger menu */
     /* I got the hamburger menu animation from: https://jonsuh.com/hamburgers. https://github.com/jonsuh/hamburgers. 

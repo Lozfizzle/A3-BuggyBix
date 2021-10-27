@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial-image-swiper {
     /* height: 100%; */
-    width: 40%;
+    width: 30%;
     margin-left: 0;
 }
 
@@ -77,13 +77,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 40%;
 }
 
-.testimonial-text-swiper .swiper-slide-active {
+/* .testimonial-text-swiper .swiper-slide-active {
     opacity: 1;
 }
 
 .testimonial-text-swiper .swiper-slide:not(.swiper-slide-active) {
     opacity: 0 !important;
-}
+} */
 
 .swiper-button-container {
     /* background: cadetblue; */
