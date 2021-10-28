@@ -5,6 +5,7 @@ console.log("JavaScript is working!")
 // can i do the scroll trigger thing, and then tell it to run a function onEnter, on Leave etc
 // and then put the timeline in the function?? 
 // i have no idea what im doing
+/*
 ScrollTrigger.create({
     trigger: ".ingredients-images",
     start: "top 20%",
@@ -43,27 +44,65 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     trigger: ".ingredients-images",
     start: "top 20%",
-    endTrigger: ".why-insects",
+    endTrigger: ".insects-images",
     end: "top: top",
     markers: true,
     pin: ".ingredient-packet",
     onEnter: () => {
         gsap.to('.ingredient-packet', {
-            x: 300,
-            duration: 3
+            x: 270,
+            duration: 1,
+            ease: "ease-in",
+            transform: "scale(0.75)",
         })
-    }
-
+    },
+    onEnterBack: () => {
+        gsap.to('.ingredient-packet', {
+            x: 0,
+            duration: 1,
+        })
+    },
 })
 
 
 
-
+// section benefits animate upwards
+// TODO: the timing of this as it scrolls into view on the screen.
 ScrollTrigger.create({
     trigger: ".section-benefits",
-    start: "top 20%",
+    start: "top bottom",
     endTrigger: ".why-insects",
-    end: "top: top",
+    end: "top top",
     markers: true,
+    onEnter: () => {
+        gsap.from(".benefit-column", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2
+        })
+        gsap.from(".section-benefits h1", {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+        })
+    }
+    
 })
 
+*/
+
+const ingredientsTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.ingredients-images',
+        start: 'top top',
+        pin: true,
+        scrub: 1
+    }
+})
+
+ingredientsTl.to('.ingredient-packet', {x: '30%', scale: 0.8})
+ingredientsTl.from('.in-txt1', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt1', {y: -100, duration: 4, opacity: 0, delay: 4})
+ingredientsTl.from('.in-txt2', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt2', {y: -100, duration: 4, opacity: 0, delay: 4})

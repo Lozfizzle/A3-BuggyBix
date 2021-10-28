@@ -129,6 +129,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
+    transition: all 1 ease;
 }
 
 .topbar .icons-right {
