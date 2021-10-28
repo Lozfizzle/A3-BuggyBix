@@ -1,7 +1,10 @@
 console.log("JavaScript is working!")
 
 
-
+// what is the best way of structuring this. this seems really shit. 
+// can i do the scroll trigger thing, and then tell it to run a function onEnter, on Leave etc
+// and then put the timeline in the function?? 
+// i have no idea what im doing
 ScrollTrigger.create({
     trigger: ".ingredients-images",
     start: "top 20%",
@@ -35,6 +38,8 @@ ScrollTrigger.create({
     },
 })
 
+// what im trying to do, is pin the packet, as the text comes up on the side
+
 ScrollTrigger.create({
     trigger: ".ingredients-images",
     start: "top 20%",
@@ -42,29 +47,23 @@ ScrollTrigger.create({
     end: "top: top",
     markers: true,
     pin: ".ingredient-packet",
+    onEnter: () => {
+        gsap.to('.ingredient-packet', {
+            x: 300,
+            duration: 3
+        })
+    }
 
 })
 
 
 
 
-// let tl = gsap.timeline()
-// tl.to(".ingredients-images", {
-//     scrollTrigger: {
-//         trigger: ".ingredients-images",
-//         start: "top 200",
-//         endTrigger: "bottom",
-//         end: "bottom 400",
-//         markers: {
-//             startColor: "purple",
-//             endColor: "fuscia",
-//             fontSize: "1.5em"
-//             },
-//     },
-//     backgroundColor: "#EB8B31",
-//     ease: "expo.out",
-//     duration: 5,
-//     scrub: true,
-// })
-
+ScrollTrigger.create({
+    trigger: ".section-benefits",
+    start: "top 20%",
+    endTrigger: ".why-insects",
+    end: "top: top",
+    markers: true,
+})
 

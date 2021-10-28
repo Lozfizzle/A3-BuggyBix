@@ -1,0 +1,164 @@
+/* base styling  ---------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #111;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 5.2vw;
+}
+
+h1 .sm {
+    font-size: 0.5em;
+}
+
+h2 {
+    font-size: 2.3vw;
+    text-transform: uppercase;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 200px;
+    background: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    font-weight: 600;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+}
+
+button.is-big {
+    font-size: 1.2em;
+}
+
+button .fa-angle-right, button .fa-angle-left {
+    color: #1be0f1;
+    margin-left: 0.5em;
+}
+
+/* pill */
+
+.pill {
+    padding: 0.2em 0.7em;
+    border-radius: 200px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.section-iso {
+    height: 100vh;
+    padding: 2em;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    /* so we can position elements absolutly inside */
+}
+
+.section-iso h1,
+.section-iso h2,
+.section-iso h3 {
+    color: #fff;
+}
+
+.section-iso .content {
+    position: absolute;
+    left: 5%;
+    width: 30%;
+    color: #fff;
+    text-align: left;
+    top: 45%;
+}
+
+.section-iso .content.night {
+    opacity: 0;
+}
+
+.perth-bg {
+    background-size: cover;
+    position: absolute;
+    width: 120%;
+    /* when blurring image, make it bigger so no white gap */
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    /* want it to be at the back */
+}
+
+.perth-bg.day {
+    background: url('/images/perth-day.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.perth-bg.night {
+    background: url('/images/perth-night.jpg') center center no-repeat;
+    opacity: 0;
+    background-size: cover;
+}
+
+/* camera back */
+.camera-back {
+    position: relative;
+    width: 55%;
+    margin: 0 auto; /* 0 and auto, when the page first loads, it comes in on the centre, and then moves to the right. */
+}
+
+/* set the container to the size you want, and then the image to fill the container.
+then when we move the containing div, everything inside will move with it */
+.camera-back .camera-body {
+    width: 100%;
+}
+
+.camera-back .camera-display {
+    position: absolute;
+    left: 15%;
+    bottom:16%;
+    width: 46%;
+    height: 39%;
+    object-fit: cover; /* so the image doesnt distort as we are setting both a hight and a width */
+    border-radius: 3px;
+}
+
+.camera-back .camera-display.night {
+    opacity: 0;
+}
+
+/*night toggle / switch */
+#night-toggle {
+    position: absolute;
+    top:5%;
+    right: 5%;
+}
+
+/* getting hold of the CSS part, and the thing */
+#night-toggle::part(label) {
+    color: #fff;
+}
+
+
+/* noise dialogue */
+#dialog-noise-comparison {
+    text-align: left;
+    --width: 80vw;
+}
+
+#dialog-noise-comparison img {
+    width: 100%;
+}
