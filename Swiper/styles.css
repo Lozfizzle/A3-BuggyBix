@@ -10,6 +10,20 @@ body {
     padding: 0;
 }
 
+:root, :host, .sl-theme-brown {
+    --sl-color-primary-50: 250 249 249;
+    --sl-color-primary-100: 237 236 235;
+    --sl-color-primary-200: 223 222 220;
+    --sl-color-primary-300: 208 206 203;
+    --sl-color-primary-400: 188 186 181;
+    --sl-color-primary-500: 163 159 153;
+    --sl-color-primary-600: 136 131 123;
+    --sl-color-primary-700: 114 107 97;
+    --sl-color-primary-800: 95 88 77;
+    --sl-color-primary-900: 70 62 49;
+    --sl-color-primary-950: 46 37 23;
+}
+
 p {
     font-family: 'DM Sans', sans-serif;
     font-weight: 200;
@@ -26,7 +40,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #302718;
 }
 
-.section.section-testimonials {
+.beige-text {
+    color: #D9CCA7;
+    /* TODO: change this colour to the one in the js of the long html section */
+}
+
+.orange-text {
+    color: orange;
+}
+
+.section-testimonials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -35,6 +58,47 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.heading {
+    z-index: 101;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    margin-top: 100px;
+}
+
+.testimonial-image-swiper {
+    height: 70vh;
+    width: 40%;
+}
+
+.testimonial-image-swiper .swiper-wrapper {
+    align-items: center;
+    /* -webkit-box-align: center;
+    -ms-flex-align: center;  */
+}
+
+.testimonial-image-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 370px;
+    height: 350px;
+    position: relative;
+}
+
+.testimonial-image-swiper .swiper-slide img {
+    /* blur the in-active images in the gallery */
+    filter: contrast(0.5) blur(1px);
+    width: 100%;
+    object-fit: cover;
+}
+
+.testimonial-image-swiper .swiper-slide-active img {
+    /* but dont blue the active image in the gallery */
+    filter: contrast(1) blur(0px) !important;
 }
 
 /* .flex-row {
@@ -46,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: -15px;
     margin-left: -15px;
 }
+
 .flex-row .flex-col {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -60,67 +125,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
 } */
 
-.testimonial-image-swiper {
-    height: 100vh;
-    width: 40%;
-}
-
-.testimonial-image-swiper .swiper-wrapper {
-    align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-}
-
-.testimonial-image-swiper .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 370px !important;
-    height: 350px;
-    position: relative;
-}
-
-.testimonial-image-swiper .swiper-slide img {
-    filter: contrast(0.5) blur(1px);
-    width: 100%;
-    /* height: 100%; */
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.testimonial-image-swiper .swiper-slide-active img {
-    filter: contrast(1) blur(0px) !important;
-}
-
-.flex-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.flex-row .flex-col {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+/* the text swiper is next to the image swiper */
 
 .swiper.testimonial-text-swiper {
-    height: 100vh;
-    background-color: paleturquoise;
+    height: 70vh;
+    background-color: #D9CCA7; /* change this to the nice beige colour */ 
     width: 60%;
 }
+
 .testimonial-text-swiper .content {
-    width: 75%;
+    width: 100%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -132,13 +146,120 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 190px 0 150px;
+    line-height: 1.7em;
+}
+
+.testimonial-text-swiper p {
+    font-size: 1.2em;
+}
+
+.testimonial-text-swiper h3 {
+    margin-top: 30px;
+}
+
+/* the packet and the thumbnail image are going to be next to each other */ 
+.review {
+    display: inline-block;
+}
+
+/* now we are going to vertically align the image of the packet in the review and the link to what to product is */
+
+.testimonial-text-packet {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+    margin: auto;
 }
 
 /* the swiper buttons */
-.swiper-button-container {
+/* using shoelace icon button components */
+
+.button-next, .button-prev {
+    font-size: 3rem;
+    /* height: 50px; */
+    padding: 0.3em;
+}
+
+.button-next {
     position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 100;
+}
+
+.button-prev {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    z-index: 100;
+}
+
+/* styling the shoeloace icon buttons colour using how they recommended to do this in example:color 
+https://shoelace.style/components/icon-button */
+
+sl-icon-button::part(base), sl-icon-button::part(base):active {
+    color: #302718;
+}
+
+sl-icon-button::part(base):hover {
+    color: #695d49;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .testimonial-text-swiper .content {
+        padding: 0 70px 0 70px;
+    }
+    .testimonial-image-swiper .swiper-slide {
+       display: block;
+       
+    }  
+    /* .testimonial-image-swiper .swiper-img {
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+
+    } */
 
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .section-testimonials {
+        flex-direction: column;
+    }
+    .testimonial-image-swiper .swiper-wrapper {
+        align-items: flex-start;
+    }  
+    .swiper.testimonial-image-swiper, .swiper.testimonial-text-swiper {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        margin-bottom: 50px;
+    }
+    .heading {
+        position: static;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .button-next {
+        bottom: 40%;
+        left: 1vw;
+    }
+    .button-prev {
+        bottom: 40%;
+        left: 80vw;
+    }
+       
+
+}
+
+
+
+
+
+
 

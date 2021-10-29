@@ -1,4 +1,4 @@
-console.log("JavaScript is working!")
+console.log("Swiper is working!")
 
 var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
     spaceBetween: 50,
@@ -11,8 +11,8 @@ var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
         // as i wanted the images off to the left side of the screen
         // nextEl: '.swiper-button-next',
         // prevEl: '.swiper-button-prev',
-        nextEl: '.button-prev',
-        prevEl: '.button-next',
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
     },
     keyboard: {
         enabled: true,

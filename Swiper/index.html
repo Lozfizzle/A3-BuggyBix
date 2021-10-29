@@ -21,10 +21,15 @@
 </head>
 <body>
     
-    <div class="section section-testimonials">
+    <div class="section-testimonials">
         <!-- two swipers next to each other, one with image, and the other with corresponding text. -->
         <!-- have a look at this example https://codepen.io/md-aqil/pen/abOVOKe -->
         <!-- swiper images -->
+        <div class="heading">
+            <h1><span class="orange-text">Planet loving pet</span></h1>
+            <h1>testimonials</h1>
+        </div>
+
         <div dir="rtl" class="swiper testimonial-image-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -42,11 +47,12 @@
       
         <!-- navigation buttons -->
         <div class="swiper-button-container">
-            <sl-icon class="button-next" name="arrow-left-circle-fill"></sl-icon>
-            <sl-icon class="button-prev" name="arrow-right-circle-fill"></sl-icon>
-            <!-- <div class="swiper-button-prev"></div>    
-            <div class="swiper-button-next"></div> -->
+            <sl-icon-button name="arrow-right-circle-fill" label="next slide button" class="button-prev"></sl-icon-button>
+            <sl-icon-button name="arrow-left-circle-fill" label="previous slide button" class="button-next"></sl-icon-button>
+            <!-- using icon-buttons from shoelace componenets-->
         </div>
+
+        
 
         <!-- swiper text -->
         <div class="swiper testimonial-text-swiper">
@@ -55,18 +61,37 @@
                     <div class="content">
                         <p>"My pup Artemis loves these treats! I love that they are environmentally sustainable, made from all natural ingredients and are good for her!</p>
                         <h3>Laura - Artemis' Mum</h3>
+                        <div class="review">
+                            <a href="www.google.com"> 
+                                <img class="testimonial-text-packet" src="images/mealworm-orange.png">
+                            </a>
+                            <a href="#">On the Dog Mealworm Treats</a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="content">
-                        <p>"My dog Oscar goes crazy for these treats and I love that they’re environmentally sustainable and better for him."</p>
+                        <p>"My cat Oscar goes crazy for this food. Good for the cat and good for the planet."</p>
                         <h3>Michael - Oscar's Dad</h3>
+                        <div class="review">
+                            <a href="www.google.com"> 
+                                <img class="testimonial-text-packet" src="images/mealworm-brown.png">
+                            </a>
+                            <a href="#">On the Cat Daily Food</a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="content">
-                        <p>"My three dogs just got to try their samples of #buggybix and they loved them, even the fussy one!"</p>
+                        <p>"My dogs just got to try the #buggybix treats and they loved them, even the fussy one!"</p>
                         <h3>Jay - Pet Parent</h3>
+                        <div class="review">
+                            <a href="www.google.com"> 
+                                <img class="testimonial-text-packet" src="images/mealworm-green.png">
+                            </a>
+                            <a href="#">On the Dog Daily Food</a>
+                        </div>
+            
                     </div>
                 </div>
             </div>
