@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ingredients-images {
     height: 100vh;
-    background-color: beige;
+    /* background-color: beige; */
     position: relative;
 }
 
@@ -89,17 +89,37 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.why-content-left {
-    /* display: none; */
-}
 
-.in-txt1,
-.in-txt2 {
+
+.in-txt1 {
     position: absolute;   
     left: 10%;
     top:  40%;
 }
 
+.in-txt2,
+.in-txt3 {
+    position: absolute;   
+    left: 7%;
+    top:  35%;
+    padding-right: 50%;
+}
+
+.in-txt4,
+.in-txt5 {
+    position: absolute;   
+    right: 10%;
+    top:  40%;
+}
+
+.in-txt6 {
+    text-align: center;
+    
+}
+
+.section-ingredients {
+    background-color: #fff;
+}
 /* ======================== benefits ======================== */
 .section-benefits {
     text-align: center;

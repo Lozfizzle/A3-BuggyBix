@@ -1,5 +1,5 @@
 console.log("JavaScript is working!")
-
+// TODO: 3 shoelace componenets have to be 3 different types. button, icon, something else! 
 
 // what is the best way of structuring this. this seems really shit. 
 // can i do the scroll trigger thing, and then tell it to run a function onEnter, on Leave etc
@@ -98,11 +98,23 @@ const ingredientsTl = gsap.timeline({
         start: 'top top',
         pin: true,
         scrub: 1
-    }
+    },  
 })
 
-ingredientsTl.to('.ingredient-packet', {x: '30%', scale: 0.8})
+gsap.set('.section-ingredients', {backgroundColor: '#ffffff'})
+
+ingredientsTl.to('.section-ingredients', {backgroundColor: '#ff0ff0', duration: 4, ease: "linear"})
+ingredientsTl.to('.ingredient-packet', {x: '30%', scale: 0.8,})
 ingredientsTl.from('.in-txt1', {y: 100, duration: 4, opacity: 0})
 ingredientsTl.to('.in-txt1', {y: -100, duration: 4, opacity: 0, delay: 4})
 ingredientsTl.from('.in-txt2', {y: 100, duration: 4, opacity: 0})
 ingredientsTl.to('.in-txt2', {y: -100, duration: 4, opacity: 0, delay: 4})
+ingredientsTl.from('.in-txt3', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt3', {y: -100, duration: 4, opacity: 0, delay: 4})
+ingredientsTl.to('.ingredient-packet', {opacity: 0,}) 
+ingredientsTl.from('.in-txt4', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt4', {y: -100, duration: 4, opacity: 0, delay: 4})
+ingredientsTl.from('.in-txt5', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt5', {y: -100, duration: 4, opacity: 0, delay: 4})
+ingredientsTl.from('.in-txt6', {y: 100, duration: 4, opacity: 0})
+ingredientsTl.to('.in-txt6', {y: -100, duration: 4, opacity: 1, delay: 4})
