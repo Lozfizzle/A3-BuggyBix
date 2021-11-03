@@ -3,7 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 // home section
-
 // function to begin the gsap timeline animation for the elements in the home section
 homeSection()
 

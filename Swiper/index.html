@@ -25,12 +25,16 @@
         <!-- two swipers next to each other, one with image, and the other with corresponding text. -->
         <!-- have a look at this example https://codepen.io/md-aqil/pen/abOVOKe -->
         <!-- swiper images -->
-        <div class="heading">
+        <!-- <div class="heading">
             <h1><span class="orange-text">Planet loving pet</span></h1>
             <h1>testimonials</h1>
-        </div>
+        </div> -->
 
         <div dir="rtl" class="swiper testimonial-image-swiper">
+            <div class="heading">
+                <h1><span class="orange-text">Planet loving pet</span></h1>
+                <h1>testimonials</h1>
+            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                         <img src="images/artemis-1.png" alt="" class="swiper-img"> 
@@ -39,23 +43,28 @@
                         <img src="images/artemis-2.png" alt="" class="swiper-img">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/artemis-3.png" alt="" class="swiper-img">
+                    <img src="images/cat-1.png" alt="" class="swiper-img">
                 </div>
                 
             </div>
+            
+            <!-- navigation buttons -->
+            <div class="swiper-button-container">
+                <sl-icon-button name="arrow-right-circle-fill" label="next slide button" class="button-prev"></sl-icon-button>
+                <sl-icon-button name="arrow-left-circle-fill" label="previous slide button" class="button-next"></sl-icon-button>
+                <!-- using icon-buttons from shoelace componenets-->
+            </div>
         </div> 
       
-        <!-- navigation buttons -->
-        <div class="swiper-button-container">
-            <sl-icon-button name="arrow-left-circle-fill" label="previous slide button" class="button-next"></sl-icon-button>
-            <sl-icon-button name="arrow-right-circle-fill" label="next slide button" class="button-prev"></sl-icon-button>
-            <!-- using icon-buttons from shoelace componenets-->
-        </div>
 
         
 
         <!-- swiper text -->
         <div class="swiper testimonial-text-swiper">
+            <div class="heading">
+                <h1><span class="orange-text">Planet loving pet</span></h1>
+                <h1>testimonials</h1>
+            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="content">
@@ -71,27 +80,26 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="content">
-                        <p>"My cat Oscar goes crazy for this food. Good for the cat and good for the planet."</p>
-                        <h3>Michael - Oscar's Dad</h3>
+                        <p>"My dogs just got to try the #buggybix treats and they loved them, even the fussy one!"</p>
+                        <h3>Jay - Pet Parent</h3>
                         <div class="review">
                             <a href="www.google.com"> 
                                 <img class="testimonial-text-packet" src="images/mealworm-brown.png">
                             </a>
-                            <a href="#">On the Cat Daily Food</a>
+                            <a href="#">On the Dog Daily Food</a>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="content">
-                        <p>"My dogs just got to try the #buggybix treats and they loved them, even the fussy one!"</p>
-                        <h3>Jay - Pet Parent</h3>
+                        <p>"My cat Oscar goes crazy for this food. Good for the cat and good for the planet."</p>
+                        <h3>Michael - Oscar's Dad</h3>
                         <div class="review">
                             <a href="www.google.com"> 
                                 <img class="testimonial-text-packet" src="images/mealworm-green.png">
                             </a>
-                            <a href="#">On the Dog Daily Food</a>
+                            <a href="#">On the Cat Daily Food</a>
                         </div>
-            
                     </div>
                 </div>
             </div>

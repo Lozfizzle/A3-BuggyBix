@@ -12,7 +12,7 @@ var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
         // nextEl: '.swiper-button-next',
         // prevEl: '.swiper-button-prev',
         nextEl: '.button-next',
-        prevEl: '.button-prev',
+        prevEl: '.button-prev',  
     },
     keyboard: {
         enabled: true,
