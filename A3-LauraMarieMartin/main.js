@@ -41,55 +41,46 @@ const bannerSwiper = new Swiper('.banner-swiper', {
 
 
 
-// menu animation on scroll
+// menu changes on scroll
 // 1. scroll down and .banner no longer in view, the navigation bar moves up to fill that space. 
 //    at this time the logo gets smaller 
-// 2. when scroll bar hits bottom of the landing div, changes to solid background colour for the rest of the website
-// 
-// toggle the class with these properties in css. 
-
-var tl = gsap.timeline()
-tl.to(".topbar", {
-    scrollTrigger: {
-      trigger: ".topbar",
-      start: "bottom 35",
-      endTrigger: ".topbar",
-      end: "bottom 400", //TODO: not sure how else to just get it to not end??? 9999 added padding to the bottom?
-      // toggleClass: "topbar-scrolled",
-      toggleActions: "play none none reverse",
-      
-      scrub: 0.3,
-      markers: {
-        startColor: "purple",
-        endColor: "fuscia",
-        fontSize: "1.5em"
-        },
-    },
-    // duration: 1, //TODO: not sure how to get this smooth???. IT doesnt seeem to listen to duration?? 
-    height: "40px", 
-    y: "-30",
-    ease: Power4.easeIn,
-  });
-tl.to(".topbar .logo", {
-  width: "150px",
-  duration: 1, // duration doesnt seem to make a difference?? or ease. 
-  ease: Power4.easeIn,
+const navBarTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".topbar",
     start: "bottom 35",
-    endTrigger: ".topbar",
-    end: "bottom 400",
-    toggleActions: "play none none reverse",
-    // scrub: 0.1,
+    toggleActions: "play none none reset", 
+  }
+})
+navBarTl.to('.topbar .logo', {width: "150px", ease: "power4.out", duration: 1})
+navBarTl.to('.topbar', {height: "50px", y: "-35", ease: "power4.out", duration: 0.5}, "=-1")
+
+// 2. when scroll bar hits bottom of the landing div, changes to solid background colour for the rest of the website
+const navBarColourTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section-marquee",
+    start: "top top",
+    toggleActions: "play none none reverse", // onEnter: play the tl, onLeaveback: reverse the tl to its original start 
   }
 })
 
-// function. animate home section elements. 
-function homeSection(){
-  console.log("homesection")
+// gsap would accept the easing to get a smooth transition on background colour change unless you set it 
+// here it is, but using a hex code thats transparent. 
+gsap.set('.topbar', {backgroundColor: 'ffffff00'})
 
-  const tl = new TimelineMax({delay: 0.5})
-  tl.from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
+// now actually changing it
+navBarColourTl.to('.topbar', {backgroundColor: '#ffffff', duration: 1, ease: "power4.out"})
+
+
+
+
+// function. animate home section elements. 
+// text content comes in from the side
+// the arrow button comes top-down
+// the shop button from the bottom-up
+function homeSection(){
+
+  const landingTl = new TimelineMax({delay: 2}) /* give it some time for the logo animation */
+  landingTl.from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
     .from(".button-down", {y: -30, duration: 1.5, opacity: 0}, "-=0.5" )
     .from(".shop-sustainable", {y:30, duration: 1, opacity: 0}, "-=1")
 }
