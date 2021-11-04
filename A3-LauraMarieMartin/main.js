@@ -45,8 +45,8 @@ const bannerSwiper = new Swiper('.banner-swiper', {
 const navBarTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".topbar",
-    start: "bottom 35",
-    toggleActions: "play none none reset", 
+    start: "bottom 35px", // when the bottom of the trigger hits 35px down the screen (i.e. after the height of the banner)
+    toggleActions: "play none none reset",
   }
 })
 navBarTl.to('.topbar .logo', {width: "150px", ease: "power4.out", duration: 1})
@@ -174,8 +174,21 @@ testimonialImageSwiper.controller.control = swiperTestimonialText;
 swiperTestimonialText.controller.control = testimonialImageSwiper;
 
 
+// subscribe gsap animation
+// when top of signup section hits 90% down the screen play the tl
+// onLeaveBack - reset the tl, so when you scroll back down the animation plays again
+const subscribeTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sign-up",
+    start: "top 90%",
+    toggleActions: "play none none reset", 
+  },
+})
 
-
+subscribeTl.from('.sign-up h1', {y: 50, opacity: 0})
+subscribeTl.from('.sign-up p', {y: 30, opacity:0})
+subscribeTl.from('.form sl-input', {x: -50, opacity: 0, duration: 1})
+subscribeTl.from('.form sl-button', {x: 30, opacity: 0}, '-=1')
 
 
 

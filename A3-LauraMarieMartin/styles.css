@@ -728,13 +728,16 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 .section-benefits {
     text-align: center;
-}
-
-/* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
-mobile - only show h2?? */
-
-.benefit-columns {
     display: flex;
+  }
+  
+  /* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
+  mobile - only show h2?? */
+  
+  .benefit-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: baseline;
     text-align: center;
     padding: 0 8%;
@@ -1146,6 +1149,13 @@ footer .dog-animation {
         width: 80vw;
         margin-bottom: 30vh;
     }
+/* ========== menu & banner ========== */
+  .benefit-column {
+    width: 33.3%;
+    flex-grow: 0;
+    padding-top: 5em;
+  }
+
 
 /* ========== testimonials from customers ========== */  
 .section-testimonials {
@@ -1223,6 +1233,15 @@ footer .dog-animation {
     .side-text {
         display: none;
     }
+/* ========== benefits ========== */
+    .benefit-column {
+      width: 100%;
+      
+      padding-top: 5em;
+    }
 
-
+/* ========== signup ========== */
+    .sign-up p {
+      padding: 0 10%;
+  }
 }
