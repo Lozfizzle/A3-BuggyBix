@@ -757,6 +757,134 @@ mobile - only show h2?? */
     padding: 0 7%;
 }
 
+/* ======================== testimonials from customers ======================== */
+
+.section-testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.heading {
+  z-index: 101;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.testimonial-image-swiper .heading {
+  display: none;
+  /* see text note in media queries. 
+  tldr: only want this to appear when the swipers go to columns and want the heading to be at the top of the section above the image swiper
+  and not above the text swiper as it currently is */
+}
+
+.testimonial-image-swiper {
+  height: 70%;
+  width: 40%; 
+  /* the image swiper (40% of screen width) sits next to the text swiper (60% of screen width) */
+}
+
+.testimonial-image-swiper .swiper-wrapper {
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.testimonial-image-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 370px;
+  position: relative;
+}
+
+.testimonial-image-swiper .swiper-slide img {
+  /* blur the in-active images in the gallery */
+  filter: contrast(0.5) blur(1px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 100px;
+}
+
+.testimonial-image-swiper .swiper-slide-active img {
+  /* but dont blur the active image in the gallery */
+  filter: contrast(1) blur(0px) !important;
+}
+
+
+
+/* the text swiper is next to the image swiper */
+.swiper.testimonial-text-swiper {
+  height: 100%;
+  background-color: #D9CCA7; /* change this to the nice beige colour */ 
+  width: 60%; /* taking up 60% of the screen width next to the image swipers 40% */
+}
+
+.testimonial-text-swiper .content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 50px 190px 100px 150px;
+  line-height: 1.7em;
+}
+
+/* text styling for the testimonial swiper */
+.testimonial-text-swiper p {
+  font-size: 1.2em;
+}
+
+.testimonial-text-swiper h3 {
+  margin-top: 30px;
+}
+
+/* the packet and the thumbnail image are going to be next to each other */ 
+.review {
+  display: inline-block;
+}
+
+/* now we are going to vertically align the image of the packet in the review and the link to what to product is */
+.testimonial-text-packet {
+  display: inline-block;
+  width: 30px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+/* the swiper buttons */
+/* using shoelace icon button components */
+.swiper-button-container {
+  width: 100%;
+  /* the container for the buttons is the full width as the image carousel */
+}
+
+.button-next, .button-prev {
+  font-size: 3rem;
+  padding: 0.3em;
+}
+
+/* styling the shoeloace icon buttons colour using how they recommended to do this in example:color 
+https://shoelace.style/components/icon-button */
+sl-icon-button::part(base), sl-icon-button::part(base):active {
+  color: #302718;
+}
+
+sl-icon-button::part(base):hover {
+  color: #695d49;
+}
+
 /* ======================== signup ======================== */
 
 .sign-up {
@@ -835,6 +963,13 @@ footer .dog-animation {
 }
 
 /* ======================== MOBILE ======================== */
+
+@media only screen and (max-width: 1200px) {
+  .testimonial-text-swiper .content {
+      padding: 50px 70px 100px 70px;
+      /* adjusting the padding left/right of the text content in the swiper so it goes out further towards the edge */
+  }
+}
 
 @media only screen and (max-width: 768px) {
     /* ========== menu & banner ========== */
@@ -1002,21 +1137,66 @@ footer .dog-animation {
         text-align: center;
         display: inline-block;
         margin-top: 8vh;
-
     }
-    
     .section-landing h1 {
         display: none;
     }
-
     .section-landing #logo-mobile {
         display:inline-block;
         width: 80vw;
         margin-bottom: 30vh;
     }
 
-/* ============ logo marquee ============ */ 
-    
+/* ========== testimonials from customers ========== */  
+.section-testimonials {
+  flex-direction: column;
+  /* now the two swipers will be one above the other */ 
+}
+.testimonial-image-swiper .swiper-wrapper {
+  align-items: flex-start;
+}  
+.swiper.testimonial-image-swiper {
+  width: 100%;
+  object-fit: contain;
+}
+.testimonial-image-swiper .swiper-slide {
+  width: 60vw; 
+  /* make the image swiper not so large of the screen */
+}
+.testimonial-image-swiper .swiper-slide img {
+  height: 100%;
+  margin-top: 10px;
+}
+.swiper.testimonial-text-swiper {
+  width: 100%;
+}
+.testimonial-text-swiper .content {
+  height: 100%;
+  padding: 0 40px 40px 40px;
+}
+.testimonial-text-swiper .heading {
+  display: none;
+  /* the heading was originally above the text, but now we have gone to columns, i wanted the heading text to be at the top of the section not in the middle
+  heading text appears twice in the html - above the image swiper and above the text swiper.
+  switching which appears based on screen size - whether the image swiper is at the top of the screen or not */
+}
+.testimonial-image-swiper .heading {
+  display: block;
+}
+.testimonial-text-swiper p {
+  font-size: 1.4em;
+  padding-top: 50px;
+}
+
+.testimonial-text-swiper h3 {
+  margin-top: 20px;
+}
+.swiper-button-container {
+  text-align: center;
+}
+.button-next, .button-prev {
+  margin: 0 10%;
+}
 }
 
 
