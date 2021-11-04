@@ -1,4 +1,4 @@
-console.log("A3 is working!")
+console.log("yo!")
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -39,8 +39,6 @@ const bannerSwiper = new Swiper('.banner-swiper', {
 });
 
 
-
-
 // menu changes on scroll
 // 1. scroll down and .banner no longer in view, the navigation bar moves up to fill that space. 
 //    at this time the logo gets smaller 
@@ -63,7 +61,7 @@ const navBarColourTl = gsap.timeline({
   }
 })
 
-// gsap would accept the easing to get a smooth transition on background colour change unless you set it 
+// gsap wouldnt accept the easing to get a smooth transition on background colour change unless you set it 
 // here it is, but using a hex code thats transparent. 
 gsap.set('.topbar', {backgroundColor: 'ffffff00'})
 
@@ -79,7 +77,7 @@ navBarColourTl.to('.topbar', {backgroundColor: '#ffffff', duration: 1, ease: "po
 // the shop button from the bottom-up
 function homeSection(){
 
-  const landingTl = new TimelineMax({delay: 2}) /* give it some time for the logo animation */
+  const landingTl = new TimelineMax({delay: 2}) /* give it some time, wait until after the logo animation is done so user isnt looking in too many directions all at once */
   landingTl.from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
     .from(".button-down", {y: -30, duration: 1.5, opacity: 0}, "-=0.5" )
     .from(".shop-sustainable", {y:30, duration: 1, opacity: 0}, "-=1")
@@ -104,6 +102,8 @@ function homeSection(){
 
 
 // logo marquee
+// using swiper js
+// logo marquee has infinite loop, and starts automatically
 const logoSwiper = new Swiper('.logo-swiper', {
   spaceBetween: 60,
   centeredSlides: true,
@@ -115,16 +115,19 @@ const logoSwiper = new Swiper('.logo-swiper', {
   slidesPerView: 5,
   allowTouchMove: false,
   disableOnInteraction: true,
-   // Responsive breakpoints to adjust number of logos that appear on different size screens. 
-   // note: its a little buggy, sometimes the loop will pause when resizing the screen
+   // Responsive breakpoints to adjust number of logos that appear on different size screens so they are a good size on various screen sizes 
+   // note: its a little buggy, the autoplay will pause when crossing breakpoints refreshing the page restarts the autoplay
+   // adding ' autoplay: true ' seems to make the autoplay continue to work when resizing page without refresh
   breakpoints: {
-    // when window width is <= 100px 
+    // when window width is <= 100px
+    // so between screen size 100 - 768 it will show 2 logos at a time
     100: {
       slidesPerView: 2,
     },
     // when window width is <= 768px 
     768: {
       slidesPerView: 5,
+      autoplay: true
     },
     // when window width is <= 8000px - it was the biggest screen i could come across
     8000: {
@@ -132,5 +135,22 @@ const logoSwiper = new Swiper('.logo-swiper', {
     },
   }
 });
+
+
+// subscribe submit form
+// i know nothing about server side programming
+// but this ouputs the email submitted in the sl-input to the console =)
+// with info on how to do this from here: 
+// https://shoelace.style/components/form
+// https://developer.mozilla.org/en-US/docs/Web/API/FormData/get 
+// the formData returns the ' email ' value, (given the sl-input name="email" see html line 292 )
+// TODO: line 292 
+const subscribeForm = document.querySelector('.input-validation-required')
+
+subscribeForm.addEventListener('sl-submit', event => {
+  const formData = event.detail.formData
+  console.log(formData.get("email"))
+  
+})
 
 
