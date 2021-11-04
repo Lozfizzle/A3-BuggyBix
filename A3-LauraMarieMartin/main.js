@@ -114,7 +114,23 @@ const logoSwiper = new Swiper('.logo-swiper', {
   loop: true,
   slidesPerView: 5,
   allowTouchMove: false,
-  disableOnInteraction: true
+  disableOnInteraction: true,
+   // Responsive breakpoints to adjust number of logos that appear on different size screens. 
+   // note: its a little buggy, sometimes the loop will pause when resizing the screen
+  breakpoints: {
+    // when window width is <= 100px 
+    100: {
+      slidesPerView: 2,
+    },
+    // when window width is <= 768px 
+    768: {
+      slidesPerView: 5,
+    },
+    // when window width is <= 8000px - it was the biggest screen i could come across
+    8000: {
+      slidesPerView: 5,
+    },
+  }
 });
 
 
