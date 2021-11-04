@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+.orange-text {
+    color: #eb8b31;
+}
+
 /* ======================== menu & banner ======================== */
 
 .banner-swiper {
@@ -766,6 +770,26 @@ mobile - only show h2?? */
 .sign-up p {
     padding: 0 30%;
 }
+
+.form {
+    margin: 3em 0 3em 0;
+}
+
+/* styling the form field */
+sl-input {
+    width: 300px;
+    margin: 0 1.5em 0 0;
+    display: inline-block;
+}
+
+sl-input::part(base) {
+    border-color: #302718;
+}
+
+
+
+
+
 
 /* ======================== footer ======================== */
 

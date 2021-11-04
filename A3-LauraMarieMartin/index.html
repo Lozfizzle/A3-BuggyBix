@@ -44,7 +44,7 @@
         <nav class="primary-menu">
             <a class="link" href="#">Store</a>
             <a class="link" href="#">About</a>
-            <a class="link" href="#">Contact</a>
+            <a class="link" href="#footer">Contact</a>
             <div class="icons-right">
                 <a href="#" class="link">
                     <sl-icon name="cart4" class="icon">Cart</sl-icon><span class="link icon-label">Cart</span>
@@ -284,18 +284,23 @@
 
     <!--============ section x : signup ============-->
     <div class="sign-up">
-        <h1>Dont bee a stranger</h1>
-        <p>Sign up for more information, exclusive discounts and benefits. Enjoy 10% off your first order. </p>
-
-        <!-- <sl-input placeholder="example@email.com" clearable type="email"></sl-input> -->
-        <!-- <sl-button submit><svg></svg> Submit</sl-button> -->
+        <h1><span class="orange-text">Dont bee a </span>stranger</h1>
+        <p>Sign up for more information, exclusive discounts and benefits.</p>
+        <p>Enjoy 10% off your first order.</p>
+        <div class="form">
+            <sl-form class="input-validation-required">
+                <sl-input type="email" placeholder="example@email.com" required></sl-input>
+                <sl-button type="primary" submit>Submit</sl-button>
+            </sl-form>
+        </div>
+        
     </div>
 
 
     <!--============ section x : footer ============-->
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content" id="footer">
             <div class="col1">
                 <svg class="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 986.34 215.42">
                     <defs>
