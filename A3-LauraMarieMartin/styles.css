@@ -663,31 +663,77 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 /* ======================== section 3: ingredients ======================== */
 
+.section-ingredients {
+  overflow-x: hidden;
+}
+
 .ingredients {
   text-align: center;
+  width: 100vw;
 }
 
 .ingredients.content h1 {
   padding-top: 5%;
 }
 
-.ingredients .content p {
-  padding: 0 30% 10%;
+.ingredients.content p {
+  padding: 1% 30% 5%;
 }
 
 .ingredients-images {
   height: 100vh;
-  background-color: beige;
-  /* text-align: center; */
+  width: 100vw;
+  /* background-color: beige; */
+  position: relative;
 }
 
 .ingredient-packet {
   width: 700px;
   margin: auto;
+  padding-right: 5%;
 }
 
 .ingredients-all {
   width: 100%;
+}
+
+.in-txt1 {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+}
+
+.in-txt2, .in-txt3 {
+  position: absolute;
+  left: 7%;
+  top: 35%;
+  padding-right: 50%;
+}
+
+.in-txt4, .in-txt5 {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  padding-left: 50%;
+}
+
+.in-txt6 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  padding: 0 5% 0 5%;
+}
+/* cute bug animation */ 
+.animation {
+  width: 100vw;
+}
+
+.cute-bug {
+  width: 50px;
+  position: absolute;
+  top: 30%;
+  left: 0;
 }
 
 /* ======================== benefits ======================== */
@@ -841,9 +887,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 }
 
 /* the swiper buttons */
-
 /* using shoelace icon button components */
-
 .swiper-button-container {
   width: 100%;
   /* the container for the buttons is the full width as the image carousel */
@@ -949,6 +993,32 @@ footer .dog-animation {
 }
 
 @media only screen and (max-width: 1024px) {
+/* ========== ingredients ========== */
+.ingredients.content h1 {
+  padding-top: 7%;
+}
+.ingredients.content p {
+  padding: 1% 10% 5%;
+}
+.ingredient-packet {
+  width: 400px;
+}
+.in-txt1 {
+  left: 7%;
+  top: 50%;
+}
+.in-txt2, .in-txt3 {
+  left: 7%;
+  top: 50%;
+}
+.in-txt4, .in-txt5 {
+  right: 10%;
+  top: 40%;
+}
+.in-txt6 {
+  text-align: center;
+  padding: 0 10%;
+}
 /* ========== benefits ========== */
   .benefit-column {
     width: 33.3%;
@@ -1186,6 +1256,29 @@ footer .dog-animation {
 }
 
 @media only screen and (max-width: 640px) {
+  /* ========== ingredients ========== */
+  .in-txt1 {
+    left: 10%;
+    top: 60%;
+}
+.in-txt2, .in-txt3 {
+    left: 10%;
+    top: 60%;
+    width: 80%;
+    padding: 0;
+    text-align: center;
+}
+.in-txt4, .in-txt5 {
+    right: 10%;
+    top: 40%;
+    padding: 0;
+    text-align: center;
+    width: 80%;
+}
+.in-txt6 {
+    text-align: center;
+    padding: 0 10%;
+}
   /* ========== benefits ========== */
   .benefit-column {
     width: 100%;
