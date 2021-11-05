@@ -142,7 +142,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
-  transition: all 1 ease;
+  transition: all 1s ease;
 }
 
 /* only display this one on mobile view */
@@ -613,7 +613,6 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 /* arrow bounce animation */
 
 .arrow-down {
-  transform: translate(0 0);
   animation: bounce 2s ease infinite;
 }
 
@@ -887,7 +886,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 }
 
 .testimonial-text-swiper a:hover {
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
   color: #eb8b31;
 }
 
@@ -929,8 +928,9 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
   padding: 0.3em;
 }
 
-/* styling the shoeloace icon buttons colour using how they recommended to do this in example:color 
+/* styling the shoeloace icon buttons colour using how they recommended to do this in example:color to style buttons. 
 https://shoelace.style/components/icon-button */
+/* this is throwing errors in the CSS validator, so not sure whats happened, it seems to accept the change though?? */ 
 
 sl-icon-button::part(base), sl-icon-button::part(base):active {
   color: #302718;

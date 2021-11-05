@@ -1,7 +1,7 @@
 console.log("yo!")
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
-
+// this threw errors for missing semicolons 
 
 // home section
 // function to begin the gsap timeline animation for the elements in the home section
