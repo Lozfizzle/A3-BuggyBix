@@ -841,8 +841,8 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 .swiper.testimonial-text-swiper {
   height: 100%;
-  background-color: #D9CCA7;
-  /* change this to the nice beige colour */
+  /* background-color: #D9CCA7; */
+  background-color: #e4d5b7;
   width: 60%;
   /* taking up 60% of the screen width next to the image swipers 40% */
 }
@@ -875,6 +875,37 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 .review {
   display: inline-block;
+}
+
+.testimonial-text-swiper a {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  padding: 0 10px;
+  color: #302718;
+  text-decoration: none;
+  position: relative;
+}
+
+.testimonial-text-swiper a:hover {
+  transition: all 0.5 ease;
+  color: #eb8b31;
+}
+
+.testimonial-text-swiper a:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #EB8B31;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-text-swiper a:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 /* now we are going to vertically align the image of the packet in the review and the link to what to product is */
