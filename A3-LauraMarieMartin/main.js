@@ -78,10 +78,13 @@ navBarColourTl.to('.topbar', {backgroundColor: '#ffffff', duration: 1, ease: "po
 function homeSection(){
 
   const landingTl = new TimelineMax({delay: 2}) /* give it some time, wait until after the logo animation is done so user isnt looking in too many directions all at once */
-  landingTl.from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
+  landingTl.from("#logo-mobile", {y: 50, ease: "power3.out", duration: 2}, "-=1.5")
+    .from(".section-landing .content-hero", {x: 250, duration: 1, opacity: 0})
     .from(".button-down", {y: -30, duration: 1.5, opacity: 0}, "-=0.5" )
     .from(".shop-sustainable", {y:30, duration: 1, opacity: 0}, "-=1")
 }
+
+
 
 
 
@@ -123,11 +126,13 @@ const logoSwiper = new Swiper('.logo-swiper', {
     // so between screen size 100 - 768 it will show 2 logos at a time
     100: {
       slidesPerView: 2,
+      autoplay: true, 
+     
     },
     // when window width is <= 768px 
     768: {
       slidesPerView: 5,
-      autoplay: true
+      // autoplay: true // and then sometimes adding this makes it stop the autoplay alltogether.
     },
     // when window width is <= 8000px - it was the biggest screen i could come across
     8000: {
@@ -136,8 +141,33 @@ const logoSwiper = new Swiper('.logo-swiper', {
   }
 });
 
+
+// benefits section animation 
+// when entering this section the heading will animate downwards
+// the circle illustrations and text will animate upwards in a canon
+// this will happen everytime user enters the section. OnEnter, onEnterBack, onLeaveBack
+const benefitsTl = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".section-benefits",
+      start: "top 90%",
+      
+      markers: true,
+      toggleActions: "play none restart restart",
+  }, 
+})
+
+benefitsTl.from(".section-benefits h1", {duration: 1, y: -50, opacity: 0, delay: 1})
+benefitsTl.from(".benefit-column", {duration: 1, y: 30, opacity: 0, stagger: 0.3,},"-=0.5")
+
+
+
+
+
+
+
+
 // testimonials from customers
-var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
+const testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
   spaceBetween: 50,
   slidesPerView: "auto",
   speed: 1000,
@@ -157,7 +187,7 @@ var testimonialImageSwiper = new Swiper (".testimonial-image-swiper", {
   },
 })
 
-var swiperTestimonialText = new Swiper(".testimonial-text-swiper", {
+const swiperTestimonialText = new Swiper(".testimonial-text-swiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
   effect: "fade", //so the text faces in and out instead of moving like regular swiper 

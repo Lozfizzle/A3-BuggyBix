@@ -1,106 +1,108 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 200;
-    color: #302718;
-    margin: 0;
-    padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 200;
+  color: #302718;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 200;
-    color: #302718;
-    margin: 0;
-    padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 200;
+  color: #302718;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: itc-avant-garde-gothic-pro, sans-serif;
-    font-weight: 700;
-    margin-top: 0;
-    font-weight: 600;
-    color: #302718;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  font-weight: 600;
+  color: #302718;
 }
+
 /* change the colour of the text in some of the spans to have words that partly one colour and partly another */
+
 .white-text {
-    color: #fff;
+  color: #fff;
 }
 
 .orange-text {
-    color: #eb8b31;
+  color: #eb8b31;
 }
 
 /* ======================== menu & banner ======================== */
 
 .banner-swiper {
-    width: 100%;
-    height: 35px;
+  width: 100%;
+  height: 35px;
 }
 
 .banner-swiper .swiper-slide {
-    text-align: center;
-    background: #EB8B31;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    /*text */
-    font-weight: 500;
+  text-align: center;
+  background: #EB8B31;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /*text */
+  font-weight: 500;
 }
 
 .topbar {
-    position: fixed;
-    top: 35px;
-    left: 0;
-    right: 0;
-    height: 70px;
-    /* width: 100%; */
-    background-color: rgba(255, 255, 255, 0);
-    display: flex;
-    z-index: 100;
+  position: fixed;
+  top: 35px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  /* width: 100%; */
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  z-index: 100;
 }
 
 .primary-menu {
-    display: flex;
-    justify-content: left;
-    transition: all 0.5s cubic-bezier(.56, .14, .64, .96);
-    padding-left: 3%;
-    width: 100%;
-    vertical-align: middle;
+  display: flex;
+  justify-content: left;
+  transition: all 0.5s cubic-bezier(.56, .14, .64, .96);
+  padding-left: 3%;
+  width: 100%;
+  vertical-align: middle;
 }
 
 .primary-menu a {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 1.1em;
-    color: #302718;
-    text-decoration: none;
-    padding: 0.85em 0.25em;
-    margin: 0 0.85em;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-    vertical-align: middle;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #302718;
+  text-decoration: none;
+  padding: 0.85em 0.25em;
+  margin: 0 0.85em;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  vertical-align: middle;
 }
 
 .primary-menu a:hover {
-    color: #EB8B31;
+  color: #EB8B31;
 }
 
 /* I modified this for the underline on the navigation bar links
@@ -109,655 +111,623 @@ https://tympanus.net/Development/LineHoverStyles/
 https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 .link {
-    position: relative;
-    height: 40px;
+  position: relative;
+  height: 40px;
 }
 
 /*the line itself */
 
 .link::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background-color: #EB8B31;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #EB8B31;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* on hover, the line underneath changes from from 0 to 100% width */
 
 .link:hover::before {
-    left: 0;
-    right: auto;
-    width: 100%;
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 .topbar .logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    transition: all 1 ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  transition: all 1 ease;
 }
 
 /* only display this one on mobile view */
 
 #logo-mobile {
-    display: none;
+  display: none;
 }
 
 .topbar .icons-right {
-    font-size: 1.5em;
-    position: absolute;
-    right: 3%;
+  font-size: 1.5em;
+  position: absolute;
+  right: 3%;
 }
 
 .icons-right a {
-    padding: 0;
-    margin: 0 0.85em;
+  padding: 0;
+  margin: 0 0.85em;
 }
 
 /* only display these on mobile view - text that goes next to the icons of the cart and profile face */
 
 .icon-label {
-    display: none;
+  display: none;
 }
 
 .topbar .icon {
-    padding: 0.5em 0.5em 0 0.5em;
+  padding: 0.5em 0.5em 0 0.5em;
 }
 
 .hamburger {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-    z-index: 101;
-    color: #EB8B31;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 101;
+  color: #EB8B31;
 }
 
 /* TODO: ensure this animation also works on smaller screen size 
 /* SVG Artista to draw the logo with the bugs */
+
 /***************************************************
  * Generated by SVG Artista on 11/4/2021, 2:57:22 PM
  * MIT license (https://opensource.org/licenses/MIT)
  * W. https://svgartista.net
  **************************************************/
 
- @keyframes animate-svg-stroke-1 {
-    0% {
-      stroke-dashoffset: 766.7297973632812px;
-      stroke-dasharray: 766.7297973632812px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 766.7297973632812px;
-    }
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 766.7297973632812px;
+    stroke-dasharray: 766.7297973632812px;
   }
-  
-  @keyframes animate-svg-fill-1 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 766.7297973632812px;
   }
-  
-  .svg-elem-1 {
-    animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
-                 animate-svg-fill-1 0.7s ease 0.8s both;
-  }
-  
-  @keyframes animate-svg-stroke-2 {
-    0% {
-      stroke-dashoffset: 639.7305908203125px;
-      stroke-dasharray: 639.7305908203125px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 639.7305908203125px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-2 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
-  }
-  
-  .svg-elem-2 {
-    animation: animate-svg-stroke-2 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
-                 animate-svg-fill-2 0.7s ease 0.9s both;
-  }
-  
-  @keyframes animate-svg-stroke-3 {
-    0% {
-      stroke-dashoffset: 938.47705078125px;
-      stroke-dasharray: 938.47705078125px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 938.47705078125px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-3 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
-  }
-  
-  .svg-elem-3 {
-    animation: animate-svg-stroke-3 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both,
-                 animate-svg-fill-3 0.7s ease 1s both;
-  }
-  
-  @keyframes animate-svg-stroke-4 {
-    0% {
-      stroke-dashoffset: 938.475341796875px;
-      stroke-dasharray: 938.475341796875px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 938.475341796875px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-4 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
-  }
-  
-  .svg-elem-4 {
-    animation: animate-svg-stroke-4 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s both,
-                 animate-svg-fill-4 0.7s ease 1.1s both;
-  }
-  
-  @keyframes animate-svg-stroke-5 {
-    0% {
-      stroke-dashoffset: 612.6055297851562px;
-      stroke-dasharray: 612.6055297851562px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 612.6055297851562px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-5 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
-  }
-  
-  .svg-elem-5 {
-    animation: animate-svg-stroke-5 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s both,
-                 animate-svg-fill-5 0.7s ease 1.2000000000000002s both;
-  }
-  
-  @keyframes animate-svg-stroke-6 {
-    0% {
-      stroke-dashoffset: 766.701416015625px;
-      stroke-dasharray: 766.701416015625px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 766.701416015625px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-6 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-6 {
-    animation: animate-svg-stroke-6 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both,
-                 animate-svg-fill-6 0.7s ease 1.3s both;
-  }
-  
-  @keyframes animate-svg-stroke-7 {
-    0% {
-      stroke-dashoffset: 444.169921875px;
-      stroke-dasharray: 444.169921875px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 444.169921875px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-7 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-7 {
-    animation: animate-svg-stroke-7 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s both,
-                 animate-svg-fill-7 0.7s ease 1.4000000000000001s both;
-  }
-  
-  @keyframes animate-svg-stroke-8 {
-    0% {
-      stroke-dashoffset: 639.3825073242188px;
-      stroke-dasharray: 639.3825073242188px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 639.3825073242188px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-8 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-8 {
-    animation: animate-svg-stroke-8 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s both,
-                 animate-svg-fill-8 0.7s ease 1.5s both;
-  }
-  
-  @keyframes animate-svg-stroke-9 {
-    0% {
-      stroke-dashoffset: 188.99864196777344px;
-      stroke-dasharray: 188.99864196777344px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 188.99864196777344px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-9 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-9 {
-    animation: animate-svg-stroke-9 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s both,
-                 animate-svg-fill-9 0.7s ease 1.6s both;
-  }
-  
-  @keyframes animate-svg-stroke-10 {
-    0% {
-      stroke-dashoffset: 29.278427124023438px;
-      stroke-dasharray: 29.278427124023438px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 29.278427124023438px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-10 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-10 {
-    animation: animate-svg-stroke-10 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s both,
-                 animate-svg-fill-10 0.7s ease 1.7000000000000002s both;
-  }
-  
-  @keyframes animate-svg-stroke-11 {
-    0% {
-      stroke-dashoffset: 32.73105239868164px;
-      stroke-dasharray: 32.73105239868164px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 32.73105239868164px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-11 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-11 {
-    animation: animate-svg-stroke-11 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both,
-                 animate-svg-fill-11 0.7s ease 1.8s both;
-  }
-  
-  @keyframes animate-svg-stroke-12 {
-    0% {
-      stroke-dashoffset: 378.8302001953125px;
-      stroke-dasharray: 378.8302001953125px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 378.8302001953125px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-12 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(48, 39, 24);
-    }
-  }
-  
-  .svg-elem-12 {
-    animation: animate-svg-stroke-12 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3199999999999998s both,
-                 animate-svg-fill-12 0.7s ease 1.9000000000000001s both;
-  }
-  
-  @keyframes animate-svg-stroke-13 {
-    0% {
-      stroke-dashoffset: 283.57470703125px;
-      stroke-dasharray: 283.57470703125px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 283.57470703125px;
-    }
-  }
-  
-  @keyframes animate-svg-fill-13 {
-    0% {
-      fill: transparent;
-    }
-  
-    100% {
-      fill: rgb(235, 139, 49);
-    }
-  }
-  
-  .svg-elem-13 {
-    animation: animate-svg-stroke-13 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.44s both,
-                 animate-svg-fill-13 0.7s ease 2s both;
-  }
-  
+}
 
+@keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-1 {
+  animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both, animate-svg-fill-1 0.7s ease 0.8s both;
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 639.7305908203125px;
+    stroke-dasharray: 639.7305908203125px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 639.7305908203125px;
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-2 {
+  animation: animate-svg-stroke-2 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both, animate-svg-fill-2 0.7s ease 0.9s both;
+}
+
+@keyframes animate-svg-stroke-3 {
+  0% {
+    stroke-dashoffset: 938.47705078125px;
+    stroke-dasharray: 938.47705078125px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 938.47705078125px;
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-3 {
+  animation: animate-svg-stroke-3 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both, animate-svg-fill-3 0.7s ease 1s both;
+}
+
+@keyframes animate-svg-stroke-4 {
+  0% {
+    stroke-dashoffset: 938.475341796875px;
+    stroke-dasharray: 938.475341796875px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 938.475341796875px;
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-4 {
+  animation: animate-svg-stroke-4 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s both, animate-svg-fill-4 0.7s ease 1.1s both;
+}
+
+@keyframes animate-svg-stroke-5 {
+  0% {
+    stroke-dashoffset: 612.6055297851562px;
+    stroke-dasharray: 612.6055297851562px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 612.6055297851562px;
+  }
+}
+
+@keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-5 {
+  animation: animate-svg-stroke-5 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s both, animate-svg-fill-5 0.7s ease 1.2000000000000002s both;
+}
+
+@keyframes animate-svg-stroke-6 {
+  0% {
+    stroke-dashoffset: 766.701416015625px;
+    stroke-dasharray: 766.701416015625px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 766.701416015625px;
+  }
+}
+
+@keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-6 {
+  animation: animate-svg-stroke-6 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both, animate-svg-fill-6 0.7s ease 1.3s both;
+}
+
+@keyframes animate-svg-stroke-7 {
+  0% {
+    stroke-dashoffset: 444.169921875px;
+    stroke-dasharray: 444.169921875px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 444.169921875px;
+  }
+}
+
+@keyframes animate-svg-fill-7 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-7 {
+  animation: animate-svg-stroke-7 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s both, animate-svg-fill-7 0.7s ease 1.4000000000000001s both;
+}
+
+@keyframes animate-svg-stroke-8 {
+  0% {
+    stroke-dashoffset: 639.3825073242188px;
+    stroke-dasharray: 639.3825073242188px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 639.3825073242188px;
+  }
+}
+
+@keyframes animate-svg-fill-8 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-8 {
+  animation: animate-svg-stroke-8 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s both, animate-svg-fill-8 0.7s ease 1.5s both;
+}
+
+@keyframes animate-svg-stroke-9 {
+  0% {
+    stroke-dashoffset: 188.99864196777344px;
+    stroke-dasharray: 188.99864196777344px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 188.99864196777344px;
+  }
+}
+
+@keyframes animate-svg-fill-9 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-9 {
+  animation: animate-svg-stroke-9 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s both, animate-svg-fill-9 0.7s ease 1.6s both;
+}
+
+@keyframes animate-svg-stroke-10 {
+  0% {
+    stroke-dashoffset: 29.278427124023438px;
+    stroke-dasharray: 29.278427124023438px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 29.278427124023438px;
+  }
+}
+
+@keyframes animate-svg-fill-10 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-10 {
+  animation: animate-svg-stroke-10 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s both, animate-svg-fill-10 0.7s ease 1.7000000000000002s both;
+}
+
+@keyframes animate-svg-stroke-11 {
+  0% {
+    stroke-dashoffset: 32.73105239868164px;
+    stroke-dasharray: 32.73105239868164px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 32.73105239868164px;
+  }
+}
+
+@keyframes animate-svg-fill-11 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-11 {
+  animation: animate-svg-stroke-11 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both, animate-svg-fill-11 0.7s ease 1.8s both;
+}
+
+@keyframes animate-svg-stroke-12 {
+  0% {
+    stroke-dashoffset: 378.8302001953125px;
+    stroke-dasharray: 378.8302001953125px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 378.8302001953125px;
+  }
+}
+
+@keyframes animate-svg-fill-12 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(48, 39, 24);
+  }
+}
+
+.svg-elem-12 {
+  animation: animate-svg-stroke-12 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3199999999999998s both, animate-svg-fill-12 0.7s ease 1.9000000000000001s both;
+}
+
+@keyframes animate-svg-stroke-13 {
+  0% {
+    stroke-dashoffset: 283.57470703125px;
+    stroke-dasharray: 283.57470703125px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 283.57470703125px;
+  }
+}
+
+@keyframes animate-svg-fill-13 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(235, 139, 49);
+  }
+}
+
+.svg-elem-13 {
+  animation: animate-svg-stroke-13 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.44s both, animate-svg-fill-13 0.7s ease 2s both;
+}
 
 /* ======================== section 1: landing ======================== */
 
 .section-landing {
-    height: 100vh;
-    position: relative;
-    z-index: 2;
-    text-align: center;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 /*hero image */
 
 .hero-bg {
-    background: url("images/puppy-hero.png") center center no-repeat;
-    /*TODO: safe for web image size. also gradient fade out at bottom */
-    background-size: cover;
-    height: 100vh;
+  background: url("images/puppy-hero.png") center center no-repeat;
+  /*TODO: safe for web image size. also gradient fade out at bottom */
+  background-size: cover;
+  height: 100vh;
 }
 
 /*hero content */
 
 .section-landing .content {
-    position: absolute;
-    top: 40%;
-    right: 10%;
-    text-align: left;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  text-align: left;
 }
 
-
-
 /* text on the left and right side: great for pets. great for the planet. */
+
 .side-text {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 .side-text.left {
-    transform: rotate(-90deg);
-    left: 0;
-    top: 50%;
+  transform: rotate(-90deg);
+  left: 0;
+  top: 50%;
 }
 
 .side-text.right {
-    transform: rotate(90deg);
-    right: 0;
-    top: 50%;
+  transform: rotate(90deg);
+  right: 0;
+  top: 50%;
 }
 
 /* shop sustainable button */
 
 .shop-sustainable #button-shop {
-    height: 40px;
-    margin-top: 2em;
-    transition: all 0.3s ease-in;
-    cursor: pointer;
+  height: 40px;
+  margin-top: 2em;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 /* text inside the svg */
+
 .shop-text {
-    font-size: 10em;
-    font-weight: 500;
+  font-size: 10em;
+  font-weight: 500;
 }
 
 .shop-sustainable #button-shop:hover {
-    transform: translate(0, -10px);
-    /* transform: scale(1.05); */
+  transform: translate(0, -10px);
+  /* transform: scale(1.05); */
 }
 
 #button-shop:hover>.button-wide {
-    fill: #FFAC5E;
-    transition: all 0.3s ease-in;
+  fill: #FFAC5E;
+  transition: all 0.3s ease-in;
 }
 
 /* scroll down arrow in circle */
 
 .button-down {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50px;
-    width: 50px;
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
 }
 
 /* hover animation: become larger, and change colour */
+
 #circle-with-button {
-    transition: all 0.3s ease-in-out;
-    /* height: 100%; */
+  transition: all 0.3s ease-in-out;
+  /* height: 100%; */
 }
 
 #circle-with-button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /* change the colour of the path. */
+
 #circle-with-button:hover>.circle-button {
-    fill: #FFAC5E;
+  fill: #FFAC5E;
 }
 
 /* pause bounce animation on arrow when hovering anywhere on the circle */
+
 #circle-with-button:hover>.arrow-down {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 /* arrow bounce animation */
+
 .arrow-down {
-    transform: translate(0 0);
-    animation: bounce 2s ease infinite;
+  transform: translate(0 0);
+  animation: bounce 2s ease infinite;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ======================== section 2: logo marquee ======================== */
 
 .section-marquee {
-    padding: 3em 0;
+  padding: 3em 0;
 }
 
 .logo-swiper {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .logo-swiper .swiper-wrapper {
-    -webkit-transition-timing-function: linear!important;
-    transition-timing-function: linear!important;
-    position: relative;
+  -webkit-transition-timing-function: linear!important;
+  transition-timing-function: linear!important;
+  position: relative;
 }
 
 .logo-swiper .swiper-slide img {
-    height: 30px;
-    width: 100%;
+  height: 30px;
+  width: 100%;
 }
 
 @keyframes line-slide {
-    0% {
-        background-position: -5% 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
+  0% {
+    background-position: -5% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 /* ======================== section 3: ingredients ======================== */
 
 .ingredients {
-    text-align: center;
+  text-align: center;
 }
 
 .ingredients.content h1 {
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 .ingredients .content p {
-    padding: 0 30% 10%;
+  padding: 0 30% 10%;
 }
 
 .ingredients-images {
-    height: 100vh;
-    background-color: beige;
-    /* text-align: center; */
+  height: 100vh;
+  background-color: beige;
+  /* text-align: center; */
 }
 
 .ingredient-packet {
-    width: 700px;
-    margin: auto;
+  width: 700px;
+  margin: auto;
 }
 
 .ingredients-all {
-    width: 100%;
+  width: 100%;
 }
 
 /* ======================== benefits ======================== */
 
 .section-benefits {
-    text-align: center;
-    display: flex;
-  }
-  
-  /* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.section-benefits h1 {
+  padding: 3em 0 2em 0;
+}
+
+/* TODO: media inquiry - at half, go to two rows of 3 and 2. mobile go to 3 rows of 2, 2, 1. 
   mobile - only show h2?? */
-  
-  .benefit-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    text-align: center;
-    padding: 0 8%;
+
+.benefit-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  padding: 0 8%;
 }
 
 .benefit-column {
-    text-align: center;
-    flex-grow: 1;
-    width: 15%;
+  text-align: center;
+  flex-grow: 1;
+  width: 15%;
 }
 
 .benefit-column .benefit-col-img {
-    width: 65%;
-    height: 140px;
-    object-fit: contain;
-    margin-bottom: 1.8em;
+  width: 65%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1.8em;
 }
 
 .benefit-column p {
-    padding: 0 7%;
+  padding: 0 7%;
 }
 
 /* ======================== testimonials from customers ======================== */
@@ -790,7 +760,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 .testimonial-image-swiper {
   height: 70%;
-  width: 40%; 
+  width: 40%;
   /* the image swiper (40% of screen width) sits next to the text swiper (60% of screen width) */
 }
 
@@ -821,13 +791,14 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
   filter: contrast(1) blur(0px) !important;
 }
 
-
-
 /* the text swiper is next to the image swiper */
+
 .swiper.testimonial-text-swiper {
   height: 100%;
-  background-color: #D9CCA7; /* change this to the nice beige colour */ 
-  width: 60%; /* taking up 60% of the screen width next to the image swipers 40% */
+  background-color: #D9CCA7;
+  /* change this to the nice beige colour */
+  width: 60%;
+  /* taking up 60% of the screen width next to the image swipers 40% */
 }
 
 .testimonial-text-swiper .content {
@@ -845,6 +816,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 }
 
 /* text styling for the testimonial swiper */
+
 .testimonial-text-swiper p {
   font-size: 1.2em;
 }
@@ -853,12 +825,14 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
   margin-top: 30px;
 }
 
-/* the packet and the thumbnail image are going to be next to each other */ 
+/* the packet and the thumbnail image are going to be next to each other */
+
 .review {
   display: inline-block;
 }
 
 /* now we are going to vertically align the image of the packet in the review and the link to what to product is */
+
 .testimonial-text-packet {
   display: inline-block;
   width: 30px;
@@ -867,7 +841,9 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 }
 
 /* the swiper buttons */
+
 /* using shoelace icon button components */
+
 .swiper-button-container {
   width: 100%;
   /* the container for the buttons is the full width as the image carousel */
@@ -880,6 +856,7 @@ https://codepen.io/gabrielcojea/pen/ExPaBzQ */
 
 /* styling the shoeloace icon buttons colour using how they recommended to do this in example:color 
 https://shoelace.style/components/icon-button */
+
 sl-icon-button::part(base), sl-icon-button::part(base):active {
   color: #302718;
 }
@@ -891,357 +868,377 @@ sl-icon-button::part(base):hover {
 /* ======================== signup ======================== */
 
 .sign-up {
-    text-align: center;
+  text-align: center;
+  margin: 5% 0 5% 0;
 }
 
 .sign-up h1 {
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 .sign-up p {
-    padding: 0 30%;
+  padding: 0 30%;
 }
 
 .form {
-    margin: 3em 0 3em 0;
+  margin: 3em 0 3em 0;
 }
 
 /* styling the form field */
+
 sl-input {
-    width: 300px;
-    margin: 0 1.5em 0 0;
-    display: inline-block;
+  width: 300px;
+  margin: 0 1.5em 0 0;
+  display: inline-block;
 }
 
 sl-input::part(base) {
-    border-color: #302718;
+  border-color: #302718;
 }
-
-
-
-
-
 
 /* ======================== footer ======================== */
 
 footer {
-    height: 300px;
-    background-color: #73A641;
+  height: 300px;
+  background-color: #73A641;
 }
 
 .footer-content {
-    display: flex;
+  display: flex;
 }
 
 .col1, .col2 {
-    width: 30%;
-    padding: 2% 5%;
+  width: 30%;
+  padding: 2% 5%;
 }
 
 .col3 {
-    width: 40%;
-    padding: 2% 0 0 5%;
+  width: 40%;
+  padding: 2% 0 0 5%;
 }
 
 footer p {
-    margin-top: 5px
+  margin-top: 5px
 }
 
 footer h3 {
-    margin: 0;
+  margin: 0;
 }
 
 footer .logo {
-    height: 19px;
+  height: 19px;
 }
 
 footer .logo .cls-1 {
-    fill: #fff;
+  fill: #fff;
 }
 
 footer .dog-animation {
-    height: 170px;
-    width: 170px;
-    background-color: #302718;
+  height: 170px;
+  width: 170px;
+  background-color: #302718;
 }
 
-/* ======================== MOBILE ======================== */
+/* ======================== TABLET & MOBILE ======================== */
 
 @media only screen and (max-width: 1200px) {
   .testimonial-text-swiper .content {
-      padding: 50px 70px 100px 70px;
-      /* adjusting the padding left/right of the text content in the swiper so it goes out further towards the edge */
+    padding: 50px 70px 100px 70px;
+    /* adjusting the padding left/right of the text content in the swiper so it goes out further towards the edge */
   }
 }
 
-@media only screen and (max-width: 768px) {
-    /* ========== menu & banner ========== */
-    .banner p {
-        font-size: 0.7em;
-    }
-    .primary-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        width: 100vw;
-        background: #EB8B31;
-        flex-direction: column;
-        /* align-items: center;*/
-        /* justify-content: center;*/
-        transform: translateX(-100%);
-        /* transition: all 0.5s cubic-bezier(.56, .14, .64, .96); */
-        /* TODO: any way to get this not to do the transition when resizing from desktop to mobile?? */
-        padding-top: 100px
-    }
-    .primary-menu a {
-        font-size: 1.5em;
-    }
-    .primary-menu .link a {
-        /* font-size: 1.8em; */
-        padding: 1em 0.5em;
-        margin-bottom: 1em;
-        transition: all 0.2s;
-        margin-left: 60px;
-    }
-    .primary-menu .link {
-        height: auto;
-        width: fit-content;
-    }
-    .primary-menu .link::before {
-        background-color: #fff;
-    }
-    .primary-menu a:first-of-type {
-        margin-top: 40px;
-    }
-    .topbar .icons-right {
-        display: flex;
-        flex-direction: column;
-        position: static;
-        width: fit-content;
-        vertical-align: baseline;
-    }
-    .topbar .icon-label {
-        display: inline-block;
-        position: static;
-        color: #302718;
-    }
-    .topbar .icon {
-        padding: 0;
-        margin-right: 0.85em;
-    }
-    .topbar .icons-right a {
-        margin-bottom: 0.5em;
-    }
-    .icons-mobile {
-        display: none;
-    }
-    .primary-menu.show {
-        transform: translateX(0);
-        transition: all 0.5s cubic-bezier(.56, .14, .64, .96);
-    }
-    
-    /* dont display the logo in the navigation bar on mobile devices */
-    .topbar #logo-desktop {
-        display: none;
-    }
-    
-    .primary-menu a:hover {
-        color: #fff;
-    }
-    /* hamburger menu */
-    /* I got the hamburger menu animation from: https://jonsuh.com/hamburgers. https://github.com/jonsuh/hamburgers. 
-        I customised the size/colour properties. 
-        TODO: add notes to show understanding
-    */
-    .hamburger {
-        padding: 15px;
-        display: inline-block;
-        cursor: pointer;
-        transition-property: opacity, filter;
-        transition-duration: 0.15s;
-        transition-timing-function: linear;
-        font: inherit;
-        color: inherit;
-        text-transform: none;
-        background-color: transparent;
-        border: 0;
-        margin: 0;
-        overflow: visible;
-    }
-    .hamburger:hover {
-        opacity: 0.7;
-    }
-    .hamburger.is-active:hover {
-        opacity: 0.7;
-    }
-    .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-        background-color: #302718;
-    }
-    .hamburger-box {
-        width: 30px;
-        height: 24px;
-        display: inline-block;
-        position: relative;
-    }
-    .hamburger-inner {
-        display: block;
-        top: 50%;
-        margin-top: -2px;
-    }
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        width: 30px;
-        height: 3px;
-        background-color: #302718;
-        border-radius: 4px;
-        position: absolute;
-        transition-property: transform;
-        transition-duration: 0.15s;
-        transition-timing-function: ease;
-    }
-    .hamburger-inner::before, .hamburger-inner::after {
-        content: "";
-        display: block;
-    }
-    .hamburger-inner::before {
-        top: -10px;
-    }
-    .hamburger-inner::after {
-        bottom: -10px;
-    }
-    /* Slider - this is the animation  */
-    .hamburger--slider .hamburger-inner {
-        top: 2px;
-    }
-    .hamburger--slider .hamburger-inner::before {
-        top: 10px;
-        transition-property: transform, opacity;
-        transition-timing-function: ease;
-        transition-duration: 0.15s;
-    }
-    .hamburger--slider .hamburger-inner::after {
-        top: 20px;
-    }
-    .hamburger--slider.is-active .hamburger-inner {
-        transform: translate3d(0, 10px, 0) rotate(45deg);
-    }
-    .hamburger--slider.is-active .hamburger-inner::before {
-        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-        opacity: 0;
-    }
-    .hamburger--slider.is-active .hamburger-inner::after {
-        transform: translate3d(0, -20px, 0) rotate(-90deg);
-    }
-
-/* ========== landing section ========== */
-    .section-landing .content {
-        position: static;
-        text-align: center;
-        display: inline-block;
-        margin-top: 8vh;
-    }
-    .section-landing h1 {
-        display: none;
-    }
-    .section-landing #logo-mobile {
-        display:inline-block;
-        width: 80vw;
-        margin-bottom: 30vh;
-    }
-/* ========== menu & banner ========== */
+@media only screen and (max-width: 1024px) {
+/* ========== benefits ========== */
   .benefit-column {
     width: 33.3%;
     flex-grow: 0;
     padding-top: 5em;
   }
+}
 
+@media only screen and (max-width: 768px) {
+  /* ========== menu & banner ========== */
+  .banner p {
+    font-size: 0.7em;
+  }
+  .primary-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #EB8B31;
+    flex-direction: column;
+    /* align-items: center;*/
+    /* justify-content: center;*/
+    transform: translateX(-100%);
+    /* transition: all 0.5s cubic-bezier(.56, .14, .64, .96); */
+    /* TODO: any way to get this not to do the transition when resizing from desktop to mobile?? */
+    padding-top: 100px
+  }
+  .primary-menu a {
+    font-size: 1.5em;
+  }
+  .primary-menu .link a {
+    /* font-size: 1.8em; */
+    padding: 1em 0.5em;
+    margin-bottom: 1em;
+    transition: all 0.2s;
+    margin-left: 60px;
+  }
+  .primary-menu .link {
+    height: auto;
+    width: fit-content;
+  }
+  .primary-menu .link::before {
+    background-color: #fff;
+  }
+  .primary-menu a:first-of-type {
+    margin-top: 40px;
+  }
+  .topbar .icons-right {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: fit-content;
+    vertical-align: baseline;
+  }
+  .topbar .icon-label {
+    display: inline-block;
+    position: static;
+    color: #302718;
+  }
+  .topbar .icon {
+    padding: 0;
+    margin-right: 0.85em;
+  }
+  .topbar .icons-right a {
+    margin-bottom: 0.5em;
+  }
+  .icons-mobile {
+    display: none;
+  }
+  .primary-menu.show {
+    transform: translateX(0);
+    transition: all 0.5s cubic-bezier(.56, .14, .64, .96);
+  }
+  /* dont display the logo in the navigation bar on mobile devices */
+  .topbar #logo-desktop {
+    display: none;
+  }
+  .primary-menu a:hover {
+    color: #fff;
+  }
+  /* hamburger menu */
+  /* I got the hamburger menu animation from: https://jonsuh.com/hamburgers. https://github.com/jonsuh/hamburgers. 
+        I customised the size/colour properties. 
+        TODO: add notes to show understanding
+    */
+  .hamburger {
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+  .hamburger:hover {
+    opacity: 0.7;
+  }
+  .hamburger.is-active:hover {
+    opacity: 0.7;
+  }
+  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: #302718;
+  }
+  .hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: #302718;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+  .hamburger-inner::before {
+    top: -10px;
+  }
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+  /* Slider - this is the animation  */
+  .hamburger--slider .hamburger-inner {
+    top: 2px;
+  }
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+  }
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px;
+  }
+  .hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
+  }
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
+  }
+  /* ========== landing section ========== */
+  .section-landing .content {
+    position: static;
+    text-align: center;
+    display: inline-block;
+    margin-top: 8vh;
+  }
+  .section-landing h1 {
+    display: none;
+  }
+  .section-landing #logo-mobile {
+    display: inline-block;
+    width: 80vw;
+    margin-bottom: 30vh;
+  }
 
-/* ========== testimonials from customers ========== */  
-.section-testimonials {
-  flex-direction: column;
-  /* now the two swipers will be one above the other */ 
-}
-.testimonial-image-swiper .swiper-wrapper {
-  align-items: flex-start;
-}  
-.swiper.testimonial-image-swiper {
-  width: 100%;
-  object-fit: contain;
-}
-.testimonial-image-swiper .swiper-slide {
-  width: 60vw; 
-  /* make the image swiper not so large of the screen */
-}
-.testimonial-image-swiper .swiper-slide img {
-  height: 100%;
-  margin-top: 10px;
-}
-.swiper.testimonial-text-swiper {
-  width: 100%;
-}
-.testimonial-text-swiper .content {
-  height: 100%;
-  padding: 0 40px 40px 40px;
-}
-.testimonial-text-swiper .heading {
-  display: none;
-  /* the heading was originally above the text, but now we have gone to columns, i wanted the heading text to be at the top of the section not in the middle
+  /* ========== testimonials from customers ========== */
+  .section-testimonials {
+    flex-direction: column;
+    /* now the two swipers will be one above the other */
+  }
+  .testimonial-image-swiper .swiper-wrapper {
+    align-items: flex-start;
+  }
+  .swiper.testimonial-image-swiper {
+    width: 100%;
+    object-fit: contain;
+  }
+  .testimonial-image-swiper .swiper-slide {
+    width: 60vw;
+    /* make the image swiper not so large of the screen */
+  }
+  .testimonial-image-swiper .swiper-slide img {
+    height: 100%;
+    margin-top: 10px;
+  }
+  .swiper.testimonial-text-swiper {
+    width: 100%;
+  }
+  .testimonial-text-swiper .content {
+    height: 100%;
+    padding: 0 40px 40px 40px;
+  }
+  .testimonial-text-swiper .heading {
+    display: none;
+    /* the heading was originally above the text, but now we have gone to columns, i wanted the heading text to be at the top of the section not in the middle
   heading text appears twice in the html - above the image swiper and above the text swiper.
   switching which appears based on screen size - whether the image swiper is at the top of the screen or not */
-}
-.testimonial-image-swiper .heading {
-  display: block;
-}
-.testimonial-text-swiper p {
-  font-size: 1.4em;
-  padding-top: 50px;
+  }
+  .testimonial-image-swiper .heading {
+    display: block;
+  }
+  .testimonial-text-swiper p {
+    font-size: 1.4em;
+    padding-top: 50px;
+  }
+  .testimonial-text-swiper h3 {
+    margin-top: 20px;
+  }
+  .swiper-button-container {
+    text-align: center;
+  }
+  .button-next, .button-prev {
+    margin: 0 10%;
+  }
+  /* ========== signup ========== */  
+  .sign-up {
+    margin: 10% 0 10% 0;
+  }
 }
 
-.testimonial-text-swiper h3 {
-  margin-top: 20px;
-}
-.swiper-button-container {
-  text-align: center;
-}
-.button-next, .button-prev {
-  margin: 0 10%;
-}
-}
+@media only screen and (max-width: 640px) {
+  /* ========== benefits ========== */
+  .benefit-column {
+    width: 100%;
+    padding: 5em 5em 0 5em;
+  }
+  /* ========== footer ========== */
+  footer {
+    height: 100%;
+  }
+  
+  footer .col1, footer .col2, footer .col3 {
+    width: 50%;
+    padding: 7% 7%;
 
+  }
+}
 
 
 
 @media only screen and (max-width: 414px) {
-/* ========== menu & banner ========== */
-
-     /* making the text smaller on the banner message so it fits on one line on mobile */
-    .banner-swiper {
-        font-size: 0.75em;
-    }
-    
-/* ========== landing section ========== */
-    /* dont need to display the down arrow on mobile. to declutter the elements on the landing page on smaller screens */ 
-    .button-down {
-        display: none;
-    }
-    /* so this button scales in size on mobile devices */
-    #button-shop {
-        width: 70vw;
-    }
-    /* dont need to display the text on the side. to declutter the elements on the landing page on smaller screens */
-    .side-text {
-        display: none;
-    }
-/* ========== benefits ========== */
-    .benefit-column {
-      width: 100%;
-      
-      padding-top: 5em;
-    }
-
-/* ========== signup ========== */
-    .sign-up p {
-      padding: 0 10%;
+  /* ========== menu & banner ========== */
+  /* making the text smaller on the banner message so it fits on one line on mobile */
+  .banner-swiper {
+    font-size: 0.75em;
+  }
+  /* ========== landing section ========== */
+  /* dont need to display the down arrow on mobile. to declutter the elements on the landing page on smaller screens */
+  .button-down {
+    display: none;
+  }
+  /* so this button scales in size on mobile devices */
+  #button-shop {
+    width: 70vw;
+  }
+  /* dont need to display the text on the side. to declutter the elements on the landing page on smaller screens */
+  .side-text {
+    display: none;
+  }
+  /* ========== signup ========== */
+  .sign-up p {
+    padding: 0 10%;
+  }
+  .sign-up {
+    margin: 25% 0 25% 0;
+  }
+  .sign-up sl-input {
+    margin: 0 0 20px 0;
+  }
+/* ========== footer ========== */  
+  .footer-content {
+    flex-direction: column;
+  }
+  .col1, .col2, .col3 {
+    width: 100%;
   }
 }
